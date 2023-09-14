@@ -6,6 +6,57 @@
     <title>Pagar plan</title>
 </head>
 <body>
-    
+    <header>
+        <h2>Nombre usuario</h2>
+        <a href="inicio-de-sesion.html">Cerrar sesión</a>
+        <a href="perfil.html">
+            <img src="img/avatar.jpg" alt="avatar" height="30px">
+        </a> 
+    </header>
+    <h3>Elegiste el plan ----------</h3>
+    <section>
+        <div>
+            <img src="img/logomusica.png" height="200px">
+            <p>Descripcion del plan.</p>
+        </div>
+    </section>
+    <section>
+        <article>
+            <form action="#" method="post" >
+                <label for="Tarjeta">Tarjeta</label>
+                <input id="Tarjeta" type="text" name="Tarjeta" placeholder="Ingrese su tarjeta" pattern="[0-9]{16}">
+            </form>
+        </article>
+        <article>
+            <form action="#" method="post" >
+                <label for="VTO">VTO</label>
+                <input id="VTO" type="date" name="VTO">
+            </form>
+        </article>
+        <article>
+            <form action="#" method="post" >
+                <label for="CVC">CVC</label>
+                <input id="CVC" type="text" name="CVC" placeholder="000" CVC="[0-9]{3}">
+            </form>
+        </article>
+        <article>
+            <form action="#" method="post" >
+                <label for="Nombre_Apellido">Nombre y Apellido</label>
+                <input id="Nombre_Apellido" type="text" name="Nombre_Apellido">
+            </form>
+        </article>
+    </section>
+    <section>
+        <a href="pantalla-principal.html"> <input type="submit" value="Cancelar"> </a>
+        <a href="pantalla-principal.html"> <input type="submit" value="Pagar"> </a>
+    </section>
+    <footer>
+        <p>Integrante 1: Clarisa Rodriguez</p>
+        <p>Integrante 2: Pablo Barcena</p>
+        <p>Integrante 3: Nicolas Barrionuevo</p>
+        <p>Integrante 4: Cristian Aspi</p>
+        <p>Integrante 5: Facundo De Marco</p>
+        <p>Integrante 6: Nadia Spinelli</p>
+    </footer>
 </body>
 </html>
