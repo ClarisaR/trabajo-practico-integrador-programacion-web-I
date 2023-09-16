@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+</head>
+
+<body>
+    <main>
+        <form action="/pantalla-principal.html" id="form_inicio_sesion" method="post">
+            <div>
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" id="usuario" required minlength="5">
+            </div>
+            <div>
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" name="contrasenia" id="contrasenia" required minlength="8">
+            </div>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <a href="/registro.html">Registrarme</a>
+    </main>
+
+    <script>
+        function onFormSubmit(event){
+            event.preventDefault();
+
+            //Aca se haria la peticion a una API Rest por ejemplo.
+            // La cual validaria el inicio de sesion y nos concederia el acceso o lo denegaria.
+            // Simulamos que nos permitio el acceso redirigiendo a la vista de pantalla principal.
+            window.location.href = "/pantalla-principal.html";
+        }
+        let form = document.getElementById("form_inicio_sesion");
+        form.addEventListener("submit", onFormSubmit);
+    </script>
+</body>
+</html>
