@@ -9,34 +9,46 @@
 
 <body>
     <header>
-        <h1>Registrarte</h1>
+        <h1>Registrate</h1>
     </header>
     <main>
-        <form>
+        <form action="/index.html" id="form_registro" method="post">
             <div>
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre">
+                <input type="text" name="nombre" id="nombre" required minlength="5">
             </div>
             <div>
                 <label for="contrasenia">Contraseña</label>
-                <input type="password" name="contrasenia" id="contrasenia">
+                <input type="password" name="contrasenia" id="contrasenia" required minlength="8">
             </div>
             <div>
                 <label for="repetir-contrasenia">Repetir Contraseña</label>
-                <input type="password" name="repetir-contrasenia" id="repetir-contrasenia">
+                <input type="password" name="repetir-contrasenia" id="repetir-contrasenia" required minlength="8">
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
             </div>
             <div>
                 <label for="fecha-nacimiento">Fecha de nacimiento</label>
-                <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
+                <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" required>
             </div>
-            <a href="/inicio-de-sesion.html">Registrarte</a>
+            <button type="submit">Registrarme</button>
         </form>
-        <a href="/inicio-de-sesion.html">Iniciar sesión</a>
+        <a href="/premium.html">Premium</a>
     </main>
-</body>
 
+    <script>
+        function onFormSubmit(event){
+            event.preventDefault();
+
+            //Aca se haria la peticion a una API Rest por ejemplo.
+            // La cual validaria el inicio de sesion y nos concederia el acceso o lo denegaria.
+            // Simulamos que nos permitio el acceso redirigiendo a la vista de pantalla principal.
+            window.location.href = "/index.html";
+        }
+        let form = document.getElementById("form_registro");
+        form.addEventListener("submit", onFormSubmit);
+    </script>
+</body>
 </html>
