@@ -4,27 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
     <title>Iniciar sesión</title>
 </head>
 
 <body>
-    <main>
-        <form action="/pantalla-principal.html" id="form_inicio_sesion" method="post">
-            <div>
-                <label for="usuario">Usuario</label>
-                <input type="text" name="usuario" id="usuario" required minlength="5">
+    <div class="grid_container">
+        <main class="main">
+            <div class="card">
+                <form action="/pantalla-principal.html" id="form_inicio_sesion" method="post">
+                    <div class="field">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" name="usuario" id="usuario" required minlength="5">
+                    </div>
+                    <div class="field">
+                        <label for="contrasenia">Contraseña</label>
+                        <input type="password" name="contrasenia" id="contrasenia" required minlength="8">
+                    </div>
+                    <button type="submit" class="button button_full">Iniciar sesión</button>
+                </form>
+                <a href="/registro.html">Registrarme</a>
             </div>
-            <div>
-                <label for="contrasenia">Contraseña</label>
-                <input type="password" name="contrasenia" id="contrasenia" required minlength="8">
-            </div>
-            <button type="submit">Iniciar sesión</button>
-        </form>
-        <a href="/registro.html">Registrarme</a>
-    </main>
+        </main>
 
+        <footer class="footer">
+            <p>Integrante 1: Clarisa Rodriguez</p>
+            <p>Integrante 2: Pablo Barcena</p>
+            <p>Integrante 3: Nicolas Barrionuevo</p>
+            <p>Integrante 4: Cristian Aspi</p>
+            <p>Integrante 5: Facundo De Marco</p>
+            <p>Integrante 6: Nadia Spinelli</p>
+        </footer>
+    </div>
     <script>
-        function onFormSubmit(event){
+        function onFormSubmit(event) {
             event.preventDefault();
 
             //Aca se haria la peticion a una API Rest por ejemplo.
@@ -36,4 +50,5 @@
         form.addEventListener("submit", onFormSubmit);
     </script>
 </body>
+
 </html>
