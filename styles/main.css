@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Montserrat:wght@200;500;700&display=swap');
+
+@font-face {
+    font-family: 'MyFontLight';
+    src: url('/fonts/Montserrat-Light.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'MyFontMedium';
+    src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'MyFontBold';
+    src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+  }
 
 *,
 *::after,
@@ -9,9 +21,43 @@
 }
 :root{
     --primary-color:hsl(141.154, 73%, 42%);
+    --primary-color-dark: hsl(141, 53%, 33%);
     --secondary-color: hsl(0, 0%, 13%);
     --black: hsl(0, 0%, 7%);
     --dark-gray: hsl(0, 0%, 33%);
     --light-gray: hsl(0, 0%, 70%);
     --white: hsl(0, 0%, 100%);
 }
+body{
+   font-family: 'MyFontMedium', sans-serif; 
+}
+.field {
+  display: flex;
+}
+.field label{
+  padding-bottom: 5px;
+}
+.field input{
+  width: 100%;
+  padding: 15px 5px;
+  margin-bottom: 15px;
+}
+.button{
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 0;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+.button:hover{
+    background-color: var(--primary-color-dark);
+}
+.button_full{
+  width: 100%;
+}
+

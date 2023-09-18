@@ -1,6 +1,7 @@
 .grid_container{
     height: 100vh;
     width: 100vw;
+    padding: 5px;
     display: grid;
     grid-template-areas: "menu header"
                         "menu main"
@@ -83,7 +84,9 @@
     grid-area: footer;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--black);
 }
 .footer p{
     text-align: center;
+    margin: auto;
 }
