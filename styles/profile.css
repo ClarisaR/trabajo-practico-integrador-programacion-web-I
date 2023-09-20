@@ -1,0 +1,69 @@
+.grid_container{
+    height: 100vh;
+    width: 100vw;
+    padding: 5px;
+    display: grid;
+    grid-template-areas: "header"
+                        "main"
+                        "footer";
+    grid-template-rows: 10% 80% 10%;
+}
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.header .user_info{
+    display: flex;
+}
+.header .user_info .avatar{
+    width: 50px;
+    height: auto;
+}
+.main{
+    grid-area: main;
+}
+.card{
+    height: 100%;
+    padding: 30px 50px;
+}
+.card form{
+    display: flex;
+    flex-direction: column;
+}
+.fields{
+    width: 60%;
+}
+.field{
+    align-items: center;
+}
+.field label{
+    flex: 1;
+}
+.field input{
+    flex: 2;
+}
+.premium{
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.eliminar{
+    padding-bottom: 10px;
+}
+.button_container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.home_button{
+    text-decoration: none;
+    font-size: small;
+}
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--black);
+}

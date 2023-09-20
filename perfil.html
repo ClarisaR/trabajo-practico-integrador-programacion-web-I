@@ -4,44 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/profile.css">
     <title>Perfil</title>
 </head>
 
 <body>
-    <main>
-        <form>
-            <div>
-                <label for="usuario">Usuario</label>
-                <input type="text" name="usuario" id="usuario">
-            </div>
-            <div>
-                <label for="contrasenia">Contraseña</label>
-                <input type="password" name="contrasenia" id="contrasenia">
-            </div>
-            <div>
-                <label for="repetir-contrasenia">Repetir contraseña</label>
-                <input type="password" name="repetir-contrasenia" id="repetir-contrasenia">
-            </div>
-            <div>
-                <label for="fecha-nacimiento">Fecha de nacimiento</label>
-                <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
-            </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-            </div>
+    <div class="grid_container">
+        <header class="header">
+            <div class="user_info">
+                <div>
+                    <h2>Nombre usuario</h2>
+                    <a href="/index.html">Cerrar sesión</a>
+                </div>
 
-            <div>
-                <a href="/premium.html">Premium</a>
-                <a href="/inicio-de-sesion.html">Eliminar usuario</a>
+                <a href="/perfil.html">
+                    <img src="img/avatar.jpg" alt="avatar" class="avatar">
+                </a>
             </div>
+        </header>
+        <main class="main">
+            <div class="card">
+                <form action="/perfil.html" id="form_perfil" method="post">
+                    <div class="fields">
+                        <div class="field">
+                            <label for="usuario">Usuario</label>
+                            <input type="text" name="usuario" id="usuario" required minlength="5">
+                        </div>
+                        <div class="field">
+                            <label for="contrasenia">Contraseña</label>
+                            <input type="password" name="contrasenia" id="contrasenia" required minlength="8">
+                        </div>
+                        <div class="field">
+                            <label for="repetir-contrasenia">Repetir contraseña</label>
+                            <input type="password" name="repetir-contrasenia" id="repetir-contrasenia" required
+                                minlength="8">
+                        </div>
+                        <div class="field">
+                            <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                            <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div>
+                            <a href="/premium.html" class="premium">Premium</a>
+                            <a href="/index.html" class="eliminar">Eliminar usuario</a>
+                        </div>
+                    </div>
+                    <div class="button_container">
+                        <a href="/pantalla-principal.html" class="button home_button">Volver al Home</a>
+                        <button type="submit" class="button">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Integrante 1: Clarisa Rodriguez</p>
+            <p>Integrante 2: Pablo Barcena</p>
+            <p>Integrante 3: Nicolas Barrionuevo</p>
+            <p>Integrante 4: Cristian Aspi</p>
+            <p>Integrante 5: Facundo De Marco</p>
+            <p>Integrante 6: Nadia Spinelli</p>
+        </footer>
+    </div>
+    <script>
+        function onFormSubmit(event) {
+            event.preventDefault();
 
-            <div>
-                <a href="/pantalla-principal.html">Volver al Home</a>
-                <a href="">Guardar</a>
-            </div>
-        </form>
-    </main>
+            //Aca se haria la peticion a una API Rest por ejemplo.
+            // La cual validaria el inicio de sesion y nos concederia el acceso o lo denegaria.
+            // Simulamos que nos permitio el acceso redirigiendo a la vista de pantalla principal.
+            window.location.href = "/perfil.html";
+        }
+        let form = document.getElementById("form_perfil");
+        form.addEventListener("submit", onFormSubmit);
+    </script>
 </body>
 
 </html>
