@@ -60,4 +60,8 @@ body{
 .button_full{
   width: 100%;
 }
+.footer p{
+  text-align: center;
+  margin: auto;
+}
 

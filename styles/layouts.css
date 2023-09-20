@@ -42,6 +42,7 @@
     height: 100%;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 .main{
     grid-area: main;
@@ -86,7 +87,4 @@
     grid-template-columns: repeat(3, 1fr);
     border: 1px solid var(--black);
 }
-.footer p{
-    text-align: center;
-    margin: auto;
-}
+
