@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="styles/nombreUsuario.css">
+
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="user_info"> <!---->
+            <div>
+                <h2>Nombre usuario</h2>
+                <a href="index.html">Cerrar sesión</a>
+            </div>
+
+            <a href="perfil.html">
+                <img src="img/avatar.jpg" class="avatar" alt="avatar"> <!---->
+            </a>
+        </div>
+    </header>
+
+    <h1>PLANES PREMIUM</h1>
+
+    <section>
+        <form action="#" method="post">
+            <article>
+                <h2>Plan Mensual</h2>
+                <img src="img/plan_mensual.png" alt="plan_mensual"> <!---->
+
+                <div> <!--class="parrafo"-->
+                    <p>✔ Escucha música sin anuncios</p>
+                    <p>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</p>
+                    <p>✔ Arma tus propios playlist</p>
+                    <p>✔ Música de por vida</p>
+                </div>
+                <input id="plan_mensual" type="radio" name="plan" value="plan_mensual">
+            </article>
+
+            <article>
+                <h2>Plan Anual</h2>
+                <img src="img/plan_anual.png" alt="plan_anual"> <!---->
+
+                <div> <!--class="parrafo"-->
+                    <p>✔ Escucha música sin anuncios</p>
+                    <p>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</p>
+                    <p>✔ Arma tus propios playlist</p>
+                    <p>✔ Música de por vida</p>
+                </div>
+                <input id="plan" type="radio" name="plan" value="plan_anual">
+            </article>
+
+            <article>
+                <h2>Plan Infinito</h2>
+                <img src="img/plan_infinito.png" alt="plan_infinito"> <!---->
+                <div> <!--class="parrafo"-->
+                    <p>✔ Escucha música sin anuncios</p>
+                    <p>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</p>
+                    <p>✔ Arma tus propios playlist</p>
+                    <p>✔ Música de por vida</p>
+                </div>
+                <input id="plan" type="radio" name="plan" value="plan_infinito">
+            </article>
+        </form>
+    </section>
+
+    <section class="button_container"> <!--class="card"-->
+        <a href="pantalla-principal.html"> <input type="submit" value="HOME" class="home_button"> </a> <!--class="buttonPagar"-->
+        <a href="pagar-plan.html"> <input type="submit" value="AVANZAR" class="button"> </a>
+    </section>
+
+
 </body>
+
 </html>
