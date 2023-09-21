@@ -4,53 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagar plan</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="styles/nombreUsuario.css">
+
 </head>
+
 <body>
-    <header>
-        <h2>Nombre usuario</h2>
-        <a href="index.html">Cerrar sesión</a>
-        <a href="perfil.html">
-            <img src="img/avatar.jpg" alt="avatar" height="30px">
-        </a> 
-    </header>
-    <h3>Elegiste el plan ----------</h3>
+    <div >
+            <header class="header">
+                <div class="user_info">
+                    <div>
+                        <h2>Nombre usuario</h2>
+                        <a href="index.html">Cerrar sesión</a>
+                    </div>
+                    
+                    <a href="perfil.html">
+                        <img src="img/avatar.jpg" class="avatar" alt="avatar">
+                    </a> 
+                </div>
+            </header>
+        
+
+    <h3 class="planElegido">Elegiste el Plan Infinito</h3>
     <section>
-        <div>
-            <img src="img/logomusica.png" height="200px">
-            <p>Descripcion del plan.</p>
+        <div class="planElegido">
+            <img src="img/plan_infinito.png" class="img">
+           <div class="parrafo"> 
+                <p> ✔ Escucha música sin anuncios</p>
+                <p class="parrafosPlan">✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</p>
+                <p class="parrafosPlan">✔ Arma tus propios playlist</p>
+                <p class="parrafosPlan">✔ Música de por vida</p>
+            </div>
         </div>
     </section>
-    <section>
-        <article>
+    
+    <section class="main">
+        <div class="card">
+        
+        <article class="field">
             <form action="#" method="post" >
                 <label for="Tarjeta">Tarjeta</label>
                 <input id="Tarjeta" type="text" name="Tarjeta" placeholder="Ingrese su tarjeta" pattern="[0-9]{16}">
             </form>
         </article>
-        <article>
+        
+        <article class="field">
             <form action="#" method="post" >
                 <label for="VTO">VTO</label>
-                <input id="VTO" type="date" name="VTO">
+                <input id="VTO" type="month" name="VTO">
             </form>
         </article>
-        <article>
+        
+        <article class="field">
             <form action="#" method="post" >
                 <label for="CVC">CVC</label>
                 <input id="CVC" type="text" name="CVC" placeholder="000" CVC="[0-9]{3}">
             </form>
         </article>
-        <article>
+        
+        <article class="field">
             <form action="#" method="post" >
                 <label for="Nombre_Apellido">Nombre y Apellido</label>
                 <input id="Nombre_Apellido" type="text" name="Nombre_Apellido">
             </form>
         </article>
+    </div>
     </section>
-    <section>
+    
+    <section class="card">
+        <a href="pantalla-principal.html"> <input type="submit"class="buttonPagar" value="Pagar"> </a>
         <a href="pantalla-principal.html"> <input type="submit" value="Cancelar"> </a>
-        <a href="pantalla-principal.html"> <input type="submit" value="Pagar"> </a>
     </section>
-    <footer>
+
+    <footer class="footer">
         <p>Integrante 1: Clarisa Rodriguez</p>
         <p>Integrante 2: Pablo Barcena</p>
         <p>Integrante 3: Nicolas Barrionuevo</p>
@@ -58,5 +86,6 @@
         <p>Integrante 5: Facundo De Marco</p>
         <p>Integrante 6: Nadia Spinelli</p>
     </footer>
+    </div>
 </body>
 </html>
