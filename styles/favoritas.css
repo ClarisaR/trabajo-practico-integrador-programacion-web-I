@@ -1,0 +1,22 @@
+
+
+.favoritas_conteiner {
+    display: grid;
+    grid-template-columns: 7% 25% 20% 15% 33%;
+    grid-template-rows: minmax(11%, auto);
+    height: 100%;
+    overflow-y: auto; 
+  
+
+}
+
+.favoritas_conteiner .caja {
+   
+    height: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    text-align: center;
+}
+ 
