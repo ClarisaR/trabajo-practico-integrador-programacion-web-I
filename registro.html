@@ -14,7 +14,7 @@
         <main class="main">
             <div class="card">
                 <h1>Registrate</h1>
-                <form action="/index.html" id="form_registro" method="post">
+                <form action="index.html" id="form_registro" method="post">
                     <div class="fields">
                         <div class="field">
                             <label for="nombre">Nombre</label>
@@ -40,7 +40,7 @@
                     </div>
                     <button type="submit" class="button">Registrarme</button>
                 </form>
-                <a href="/premium.html" class="premium">Premium</a>
+                <a href="premium.html" class="premium">Premium</a>
             </div>
         </main>
         <footer class="footer">
@@ -59,7 +59,7 @@
             //Aca se haria la peticion a una API Rest por ejemplo.
             // La cual validaria el inicio de sesion y nos concederia el acceso o lo denegaria.
             // Simulamos que nos permitio el acceso redirigiendo a la vista de pantalla principal.
-            window.location.href = "/index.html";
+            window.location.href = "index.html";
         }
         let form = document.getElementById("form_registro");
         form.addEventListener("submit", onFormSubmit);

@@ -13,7 +13,7 @@
     <div class="grid_container">
         <main class="main">
             <div class="card">
-                <form action="/pantalla-principal.html" id="form_inicio_sesion" method="post">
+                <form action="pantalla-principal.html" id="form_inicio_sesion" method="post">
                     <div class="field">
                         <label for="usuario">Usuario</label>
                         <input type="text" name="usuario" id="usuario" required minlength="5">
@@ -24,7 +24,7 @@
                     </div>
                     <button type="submit" class="button button_full">Iniciar sesión</button>
                 </form>
-                <a href="/registro.html">Registrarme</a>
+                <a href="registro.html">Registrarme</a>
             </div>
         </main>
 
@@ -44,7 +44,7 @@
             //Aca se haria la peticion a una API Rest por ejemplo.
             // La cual validaria el inicio de sesion y nos concederia el acceso o lo denegaria.
             // Simulamos que nos permitio el acceso redirigiendo a la vista de pantalla principal.
-            window.location.href = "/pantalla-principal.html";
+            window.location.href = "pantalla-principal.html";
         }
         let form = document.getElementById("form_inicio_sesion");
         form.addEventListener("submit", onFormSubmit);
