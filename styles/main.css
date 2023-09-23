@@ -1,15 +1,15 @@
 
 @font-face {
     font-family: 'MyFontLight';
-    src: url('/fonts/Montserrat-Light.ttf') format('truetype');
+    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
   }
   @font-face {
     font-family: 'MyFontMedium';
-    src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
+    src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
   }
   @font-face {
     font-family: 'MyFontBold';
-    src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
   }
 
 *,
@@ -30,6 +30,8 @@
 }
 body{
    font-family: 'MyFontMedium', sans-serif; 
+   background-color: var(--black);
+   color: var(--white);
 }
 .field {
   display: flex;
