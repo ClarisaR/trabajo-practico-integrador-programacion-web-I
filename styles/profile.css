@@ -16,12 +16,7 @@
 }
 .header .user_info{
     display: flex;
-}
-.header .user_info .avatar{
-    display: flex;
-    width: 50px; 
-  height: 50px; 
-  border-radius: 50%; 
+    align-items: center;
 }
 .main{
     grid-area: main;
@@ -30,12 +25,22 @@
     height: 100%;
     padding: 30px 50px;
 }
+@media (max-width: 768px) {
+    .card{
+        padding: 20px 30px;
+    }
+}
 .card form{
     display: flex;
     flex-direction: column;
 }
 .fields{
-    width: 60%;
+    width: 80%;
+}
+@media (max-width: 768px) {
+    .fields{
+        width: 100%;
+    }
 }
 .field{
     align-items: center;
@@ -43,8 +48,23 @@
 .field label{
     flex: 1;
 }
+@media (max-width: 375px) {
+    .field label{
+        font-size: 0.7em;
+    }
+}
+@media (min-width: 376px) and (max-width: 768px) {
+    .field label{
+        font-size: 0.8em;
+    }
+}
 .field input{
     flex: 2;
+}
+@media (max-width: 768px){
+    .field input{
+        flex: 1;
+    }
 }
 .premium{
     display: block;
@@ -61,17 +81,22 @@
 }
 .home_button{
     text-decoration: none;
+    font-weight: bold;
     font-size: small;
+}
+@media(max-width: 768px) {
+    .home_button{
+        font-size: 0.7em;
+    }
 }
 .footer{
     grid-area: footer;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border: 1px solid var(--black);
+    border: 1px solid var(--dark-gray);
 }
-
-.card .pagarPlan{
-    display: block;
-    justify-content: center;
-    background-color: blueviolet;
+@media (max-width: 768px){
+    .footer{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
