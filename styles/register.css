@@ -1,11 +1,15 @@
+body{
+    margin: 0;
+}
 .grid_container{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     padding: 5px;
     display: grid;
+    box-sizing: border-box;
     grid-template-areas: "main"
                         "footer";
-    grid-template-rows: 90% 10%;
+    grid-template-rows: max-content 10%;
 }
 @media (max-width: 768px) {
     .grid_container{
