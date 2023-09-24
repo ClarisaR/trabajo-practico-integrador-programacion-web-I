@@ -34,6 +34,10 @@ body{
    color: var(--white);
    font-size: 15px;
 }
+.header .user_info{
+  display: flex;
+  align-items: center;
+}
 .header .user_info .avatar{
   width: 50px;
   height: 50px;
@@ -48,6 +52,16 @@ body{
 }
 .field label{
   padding-bottom: 5px;
+}
+@media (max-width: 375px) {
+  .field label{
+      font-size: 0.7em;
+  }
+}
+@media (min-width: 376px) and (max-width: 768px) {
+  .field label{
+      font-size: 0.8em;
+  }
 }
 .field input{
   width: 100%;
@@ -92,27 +106,4 @@ body{
   .footer p{
     font-size: 0.6em;
   }
-}
-.pagarPlan{
-
-
-  display: block;
-  justify-content: center;
-}
-
-.buttonPagar{
-    padding: 10px 30px;
-    text-transform: uppercase;
-    font-weight: bold; /*Grosor de la letra*/
-    margin-bottom: 10px; 
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: 0;
-    cursor: pointer;
-    transition-property: background-color;
-    transition-duration: 0.5s;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
 }

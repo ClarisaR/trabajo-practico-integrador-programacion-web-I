@@ -45,16 +45,6 @@
 .field label{
     flex: 1;
 }
-@media (max-width: 375px) {
-    .field label{
-        font-size: 0.7em;
-    }
-}
-@media (min-width: 376px) and (max-width: 768px) {
-    .field label{
-        font-size: 0.8em;
-    }
-}
 .field input{
     flex: 2;
 }
