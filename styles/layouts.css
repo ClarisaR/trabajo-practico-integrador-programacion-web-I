@@ -49,6 +49,7 @@
 }
 .menu{
     grid-area: menu;
+    margin-bottom: 10px;
 }
 .menu ul{
     width: 100%;
