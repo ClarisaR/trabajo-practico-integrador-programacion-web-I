@@ -131,6 +131,7 @@ audio::-webkit-media-controls-panel {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border: 1px solid var(--dark-gray);
+    padding: 10px 10px;
 }
 @media (max-width: 768px){
     .footer{

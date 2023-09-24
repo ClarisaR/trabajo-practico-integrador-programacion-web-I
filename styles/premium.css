@@ -1,0 +1,61 @@
+.titulo_premium {
+    margin: 20px 30px;
+}
+.plan_premium {
+    margin: 80px 20px;
+}
+.plan_premium form {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin: 30px 20px;
+}
+.tipoDePlan {
+    padding: 30px 30px;
+}
+.tipoDePlan img {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.tipoDePlan h2 {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+.tipoDePlan div {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.tipoDePlan ul {
+    list-style: none;
+}
+.home_button{
+    text-decoration: none;
+    font-size: medium;
+    height: 40px; 
+    padding: 10px 15px;
+    border: solid 2px white;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.home_button:hover {
+    background-color: #288147;
+}
+
+.planRadioButton{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    accent-color: green;
+    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+}

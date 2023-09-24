@@ -101,6 +101,7 @@ body{
   text-align: center;
   margin: auto;
   font-size: 0.8em;
+  padding: 5px 5px;
 }
 @media(max-width: 720px) {
   .footer p{

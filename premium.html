@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium</title>
 
+    <link rel="stylesheet" href="styles/premium.css">
+    <link rel="stylesheet" href="styles/main.css"> 
+    <link rel="stylesheet" href="styles/layouts.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/login.css">
-    <link rel="stylesheet" href="styles/profile.css">
-    <link rel="stylesheet" href="styles/nombreUsuario.css">
+    <!-- <link rel="stylesheet" href="styles/login.css"> -->
+    <link rel="stylesheet" href="styles/profile.css"> 
 
 </head>
 
@@ -27,55 +28,76 @@
         </div>
     </header>
 
-    <h1>PLANES PREMIUM</h1>
+    <main>
+        <div class="titulo_premium">
+            <h1>PLANES PREMIUM</h1>
+        </div>
 
-    <section>
+    <section class="plan_premium">
         <form action="#" method="post">
-            <article>
+            <article class="tipoDePlan">
                 <h2>Plan Mensual</h2>
                 <img src="img/plan_mensual.png" alt="plan_mensual"> <!---->
 
                 <div> <!--class="parrafo"-->
-                    <p>✔ Escucha música sin anuncios</p>
-                    <p>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</p>
-                    <p>✔ Arma tus propios playlist</p>
-                    <p>✔ Música de por vida</p>
+                    <ul>
+                        <li>✔ Escucha música sin anuncios</li>
+                        <li>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</li>
+                        <li>✔ Arma tus propios playlist</li>
+                        <li>✔ Música de por vida</li>
+                    </ul>
                 </div>
-                <input id="plan_mensual" type="radio" name="plan" value="plan_mensual">
+                <label for="plan"></label>
+                <input id="plan_mensual" type="radio" name="plan" value="plan_mensual" class="planRadioButton">
             </article>
 
-            <article>
+            <article class="tipoDePlan">
                 <h2>Plan Anual</h2>
                 <img src="img/plan_anual.png" alt="plan_anual"> <!---->
 
                 <div> <!--class="parrafo"-->
-                    <p>✔ Escucha música sin anuncios</p>
-                    <p>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</p>
-                    <p>✔ Arma tus propios playlist</p>
-                    <p>✔ Música de por vida</p>
+                    <ul>
+                        <li>✔ Escucha música sin anuncios</li>
+                        <li>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</li>
+                        <li>✔ Arma tus propios playlist</li>
+                        <li>✔ Música de por vida</li>
+                    </ul>
                 </div>
-                <input id="plan" type="radio" name="plan" value="plan_anual">
+                <label for="plan"></label>
+                <input id="plan" type="radio" name="plan" value="plan_anual" class="planRadioButton">
             </article>
 
-            <article>
+            <article class="tipoDePlan">
                 <h2>Plan Infinito</h2>
                 <img src="img/plan_infinito.png" alt="plan_infinito"> <!---->
                 <div> <!--class="parrafo"-->
-                    <p>✔ Escucha música sin anuncios</p>
-                    <p>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</p>
-                    <p>✔ Arma tus propios playlist</p>
-                    <p>✔ Música de por vida</p>
+                    <ul>
+                        <li>✔ Escucha música sin anuncios</li>
+                        <li>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</li>
+                        <li>✔ Arma tus propios playlist</li>
+                        <li>✔ Música de por vida</li>
+                    </ul>
                 </div>
-                <input id="plan" type="radio" name="plan" value="plan_infinito">
+                <label for="plan"></label>
+                <input id="plan" type="radio" name="plan" value="plan_infinito" class="planRadioButton">
             </article>
         </form>
     </section>
 
     <section class="button_container"> <!--class="card"-->
-        <a href="pantalla-principal.html"> <input type="submit" value="HOME" class="home_button"> </a> <!--class="buttonPagar"-->
-        <a href="pagar-plan.html"> <input type="submit" value="AVANZAR" class="button"> </a>
+        <a href="pantalla-principal.html"  class="home_button">Cancelar</a> <!--class="buttonPagar"-->
+        <a href="pagar-plan.html" class="button">Avanzar</a>
     </section>
+</main>
 
+<footer class="footer">
+    <p>Integrante 1: Clarisa Rodriguez</p>
+    <p>Integrante 2: Pablo Barcena</p>
+    <p>Integrante 3: Nicolas Barrionuevo</p>
+    <p>Integrante 4: Cristian Aspi</p>
+    <p>Integrante 5: Facundo De Marco</p>
+    <p>Integrante 6: Nadia Spinelli</p>
+</footer>
 
 </body>
 
