@@ -19,4 +19,10 @@
     border: 1px solid black;
     text-align: center;
 }
+
+.menu .mis_favoritas{
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+}
  
