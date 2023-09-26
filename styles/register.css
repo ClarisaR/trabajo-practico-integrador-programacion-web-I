@@ -1,24 +1,15 @@
-body{
-    margin: 0;
-}
-.grid_container{
+/*.grid_container{
     height: 100vh;
     width: 100%;
     padding: 5px;
     display: grid;
-    box-sizing: border-box;
     grid-template-areas: "main"
                         "footer";
-    grid-template-rows: max-content 10%;
-}
-@media (max-width: 768px) {
-    .grid_container{
-        width: 100%;
-    }
+    grid-template-rows: 90% 10%;
 }
 .main{
     grid-area: main;
-}
+}*/
 .card{
     height: 100%;
     padding: 30px 50px;
@@ -49,6 +40,16 @@ body{
 .field label{
     flex: 1;
 }
+@media (max-width: 375px) {
+    .field label{
+        font-size: 0.7em;
+    }
+  }
+  @media (min-width: 376px) and (max-width: 768px) {
+    .field label{
+        font-size: 0.8em;
+    }
+  }
 .field input{
     flex: 2;
 }
@@ -61,7 +62,7 @@ body{
     margin-top: 20px;
     align-self: center;
 }
-.footer{
+/*.footer{
     grid-area: footer;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -71,4 +72,4 @@ body{
     .footer{
         grid-template-columns: repeat(2, 1fr);
     }
-}
+}*/

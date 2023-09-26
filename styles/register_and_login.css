@@ -1,0 +1,23 @@
+.grid_container{
+    height: 100vh;
+    width: 100%;
+    padding: 5px;
+    display: grid;
+    grid-template-areas: "main"
+                        "footer";
+    grid-template-rows: 90% 10%;
+}
+.main{
+    grid-area: main;
+}
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--dark-gray);
+}
+@media (max-width: 768px){
+    .footer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
