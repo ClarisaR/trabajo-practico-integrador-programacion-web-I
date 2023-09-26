@@ -74,6 +74,7 @@ body{
     cursor: pointer;
     transition-property: background-color;
     transition-duration: 0.5s;
+    text-decoration: none;
 }
 .button:hover{
     background-color: var(--primary-color-dark);
