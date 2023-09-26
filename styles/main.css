@@ -53,16 +53,6 @@ body{
 .field label{
   padding-bottom: 5px;
 }
-@media (max-width: 375px) {
-  .field label{
-      font-size: 0.7em;
-  }
-}
-@media (min-width: 376px) and (max-width: 768px) {
-  .field label{
-      font-size: 0.8em;
-  }
-}
 .field input{
   width: 100%;
   padding: 15px 5px;
@@ -84,12 +74,6 @@ body{
     cursor: pointer;
     transition-property: background-color;
     transition-duration: 0.5s;
-}
-@media (max-width: 768px) {
-  .button{
-      padding: 5px 15px;
-      font-size: 0.7em;
-  }
 }
 .button:hover{
     background-color: var(--primary-color-dark);
