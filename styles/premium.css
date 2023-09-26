@@ -33,19 +33,6 @@
 .tipoDePlan ul {
     list-style: none;
 }
-.home_button{
-    text-decoration: none;
-    font-size: medium;
-    height: 40px; 
-    padding: 10px 15px;
-    border: solid 2px white;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-}
-.home_button:hover {
-    background-color: #288147;
-}
 
 .planRadioButton{
     width: 20px;
