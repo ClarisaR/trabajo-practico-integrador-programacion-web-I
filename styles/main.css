@@ -84,6 +84,7 @@ body{
     cursor: pointer;
     transition-property: background-color;
     transition-duration: 0.5s;
+    text-decoration: none;
 }
 @media (max-width: 768px) {
   .button{

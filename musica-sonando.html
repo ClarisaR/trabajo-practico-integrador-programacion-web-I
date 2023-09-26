@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/layouts.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/musica_sonando.css">
     <title>Música sonando</title>
 </head>
 <body>
-    
+    <div class="grid_container">
+        <header class="header">
+            <h2>SPOTILAM</h2>
+            <div class="user_info">
+                <div>
+                    <p>Nombre usuario</p>
+                    <a href="index.html" class="cerrar_sesion">Cerrar sesión</a>
+                </div>
+
+                <a href="perfil.html">
+                    <img src="img/avatar.png" alt="avatar" class="avatar">
+                </a>
+            </div>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="pantalla-principal.html" class="home">Home</a></li>
+                <li><a href="busqueda.html" class="buscar">Buscar</a></li>
+                <li><a href="mis-albumnes.html">Mis albums</a></li>
+                <li><a href="mis-favoritas.html">Mis Favoritas</a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <section class="ms_section">
+                    <a href="musica-sonando.html"><img src="img/album8.jpg" alt="album" class="ms_album8"></a>
+                    <img src="img/estrella.png" alt="estrella" class="estrella">
+                    <ul>
+                        <li><h4>Ocean Eyes</h4></li>
+                        <li>3:20</li>
+                        <li>Billie Eilish</li>
+                        <li>Dont smile at me</li>
+                        <li>2017</li>
+                    </ul>
+            </section>
+        </main>
+        <section class="recomendados">
+            <div>
+                <img src="img/album_recomendado.jpg" alt="album" class="cover">
+                <img src="img/estrella.png" alt="estrella" class="star">
+            </div>
+            <small class="paragraph"> "Sauce Boyz" es el primer albúm de Eladio Carrion, lanzado en enero de 2020. Compuesto por 16 canciones con colaboraciones de varias estrellas del género. Incluye el tema  “Hielo” con Jhay Cortez. “3 Am” con Brytiago, “Mala Mía” con Miky Woodz y “Lluvia (remix)” con Rauw Alejandro y Amenzazzy.</small>
+        </section>
+        <section class="reproduccion">
+            <audio controls>
+                <source type="audio/mp3">
+            </audio>
+        </section>
+        <footer class="footer">
+            <p>Integrante 1: Clarisa Rodriguez</p>
+            <p>Integrante 2: Pablo Barcena</p>
+            <p>Integrante 3: Nicolas Barrionuevo</p>
+            <p>Integrante 4: Cristian Aspi</p>
+            <p>Integrante 5: Facundo De Marco</p>
+            <p>Integrante 6: Nadia Spinelli</p>
+        </footer>
+    </div>
 </body>
+
 </html>
