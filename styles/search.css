@@ -15,7 +15,7 @@
         width: 100%;
     }
 }
-.menu .buscar{
+.menu .buscar, .menu .buscar:hover{
     background-color: var(--primary-color);
     color: var(--white);
     border-radius: 5px;

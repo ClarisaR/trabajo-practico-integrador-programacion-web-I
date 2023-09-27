@@ -140,18 +140,22 @@
     padding: 10px;
     margin: 10px;
 }
-.descripcion::-webkit-scrollbar, .albums::-webkit-scrollbar{
+.albums::-webkit-scrollbar{
     width: 8px;
 }
-.descripcion::-webkit-scrollbar-thumb, .albums::-webkit-scrollbar-thumb{
+.albums::-webkit-scrollbar-thumb{
     background: var(--primary-color);
     border-radius: 4px;
 }
-.descripcion .paragraph{
+.descripcion{
     overflow-y: scroll;
     scrollbar-width: none;
+    line-height: 20px;
+    padding: 10px;
+    margin: 10px;
 }
-.descripcion .paragraph::-webkit-scrollbar{
+
+.descripcion::-webkit-scrollbar{
     display: none;
 }
 
