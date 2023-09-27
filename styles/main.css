@@ -1,96 +1,111 @@
+@font-face {
+  font-family: 'MyFontLight';
+  src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+}
 
 @font-face {
-    font-family: 'MyFontLight';
-    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
-  }
-  @font-face {
-    font-family: 'MyFontMedium';
-    src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
-  }
-  @font-face {
-    font-family: 'MyFontBold';
-    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
-  }
+  font-family: 'MyFontMedium';
+  src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyFontBold';
+  src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+}
 
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-:root{
-    --primary-color:hsl(141.154, 73%, 42%);
-    --primary-color-dark: hsl(141, 53%, 33%);
-    --secondary-color: hsl(0, 0%, 13%);
-    --black: hsl(0, 0%, 7%);
-    --dark-gray: hsl(0, 0%, 33%);
-    --light-gray: hsl(0, 0%, 70%);
-    --white: hsl(0, 0%, 100%);
+
+:root {
+  --primary-color: hsl(141.154, 73%, 42%);
+  --primary-color-dark: hsl(141, 53%, 33%);
+  --secondary-color: hsl(0, 0%, 13%);
+  --black: hsl(0, 0%, 7%);
+  --dark-gray: hsl(0, 0%, 33%);
+  --light-gray: hsl(0, 0%, 70%);
+  --white: hsl(0, 0%, 100%);
 }
-body{
-   font-family: 'MyFontMedium', sans-serif; 
-   background-color: var(--black);
-   color: var(--white);
-   font-size: 15px;
+
+body {
+  font-family: 'MyFontMedium', sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 15px;
 }
-.header .user_info{
+
+.header .user_info {
   display: flex;
   align-items: center;
 }
-.header .user_info .avatar{
+
+.header .user_info .avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin: 0 20px;
 }
-.header .user_info .cerrar_sesion{
+
+.header .user_info .cerrar_sesion {
   text-decoration: none;
   color: var(--light-gray);
 }
+
 .field {
   display: flex;
 }
-.field label{
+
+.field label {
   padding-bottom: 5px;
 }
-.field input{
+
+.field input {
   width: 100%;
   padding: 15px 5px;
   margin-bottom: 15px;
 }
+
 @media (max-width: 768px) {
-  .field input{
+  .field input {
     padding: 10px 2px;
   }
 }
-.button{
-    padding: 10px 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 10px;
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: 0;
-    cursor: pointer;
-    transition-property: background-color;
-    transition-duration: 0.5s;
-    text-decoration: none;
+
+.button {
+  padding: 10px 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 0;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  text-decoration: none;
 }
-.button:hover{
-    background-color: var(--primary-color-dark);
+
+.button:hover {
+  background-color: var(--primary-color-dark);
 }
-.button_full{
+
+.button_full {
   width: 100%;
 }
-.footer p{
+
+.footer p {
   text-align: center;
   margin: auto;
   font-size: 0.8em;
   padding: 5px 5px;
 }
+
 @media(max-width: 720px) {
-  .footer p{
+  .footer p {
     font-size: 0.6em;
   }
 }

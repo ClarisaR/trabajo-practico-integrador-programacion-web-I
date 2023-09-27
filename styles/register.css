@@ -10,58 +10,71 @@
 .main{
     grid-area: main;
 }*/
-.card{
+.card {
     height: 100%;
     padding: 30px 50px;
 }
+
 @media (max-width: 768px) {
-    .card{
+    .card {
         padding: 20px 30px;
     }
 }
-.card h1{
+
+.card h1 {
     padding-bottom: 20px;
 }
-.card form{
+
+.card form {
     display: flex;
     flex-direction: column;
 }
-.fields{
+
+.fields {
     width: 80%;
 }
+
 @media (max-width: 768px) {
-    .fields{
+    .fields {
         width: 100%;
     }
 }
-.field{
+
+.field {
     align-items: center;
 }
-.field label{
+
+.field label {
     flex: 1;
 }
+
 @media (max-width: 375px) {
-    .field label{
+    .field label {
         font-size: 0.7em;
     }
-  }
-  @media (min-width: 376px) and (max-width: 768px) {
-    .field label{
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+    .field label {
         font-size: 0.8em;
     }
-  }
-.field input{
+}
+
+.field input {
     flex: 2;
 }
-@media (max-width: 768px){
-    .field input{
+
+@media (max-width: 768px) {
+    .field input {
         flex: 1;
     }
 }
-.button{
+
+.button {
     margin-top: 20px;
     align-self: center;
 }
+
 /*.footer{
     grid-area: footer;
     display: grid;

@@ -1,23 +1,26 @@
-.main{
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.card{
+
+.card {
     width: 30%;
     display: flex;
     flex-direction: column;
     padding: 5px;
 }
-@media (max-width: 768px){
-    .card{
+
+@media (max-width: 768px) {
+    .card {
         width: 90%;
     }
 }
-.card a{
+
+.card a {
     text-align: center;
 }
-.field{
+
+.field {
     flex-direction: column;
 }
-

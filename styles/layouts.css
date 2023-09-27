@@ -1,61 +1,69 @@
-.grid_container{
+.grid_container {
     height: 100vh;
     width: 100%;
     padding: 5px;
     display: grid;
     grid-template-areas: "menu header"
-                        "menu main"
-                        "recomendados main"
-                        "recomendados reproduccion"
-                        "footer footer";
+        "menu main"
+        "recomendados main"
+        "recomendados reproduccion"
+        "footer footer";
     grid-template-columns: 20% 1fr;
     grid-template-rows: 10% 30% 30% 20% 10%;
     grid-column-gap: 20px;
 }
+
 @media (max-width: 768px) {
-    .grid_container{
+    .grid_container {
         height: auto;
         padding-bottom: 60px;
         grid-template-areas: "header"
-                            "menu"
-                            "main"
-                            "recomendados"
-                            "footer";
+            "menu"
+            "main"
+            "recomendados"
+            "footer";
         grid-template-rows: repeat(6, auto);
         grid-template-columns: 1fr;
         grid-row-gap: 20px;
     }
 }
-.header{
+
+.header {
     grid-area: header;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-@media (max-width: 768px){
-    .header{
+
+@media (max-width: 768px) {
+    .header {
         flex-direction: column-reverse;
     }
 }
+
 @media(max-width: 768px) {
-    .header .user_info{
+    .header .user_info {
         align-self: self-end;
     }
 }
-.menu{
+
+.menu {
     grid-area: menu;
     /*margin-bottom: 10px;*/
 }
-.menu ul{
+
+.menu ul {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-.menu ul li{
+
+.menu ul li {
     flex: 1;
 }
-.menu ul li a{
+
+.menu ul li a {
     display: block;
     height: 100%;
     /*justify-content: center;
@@ -67,45 +75,54 @@
     transition-duration: 0.5s;
     padding: 18px;
 }
-.menu ul li a:hover{
+
+.menu ul li a:hover {
     color: var(--white);
     background-color: rgba(0, 0, 0, 0.329);
 }
-.main{
+
+.main {
     grid-area: main;
 }
-.albums::-webkit-scrollbar{
+
+.albums::-webkit-scrollbar {
     width: 8px;
 }
-.albums::-webkit-scrollbar-thumb{
+
+.albums::-webkit-scrollbar-thumb {
     background: var(--primary-color);
     border-radius: 4px;
 }
-.recomendados{
+
+.recomendados {
     grid-area: recomendados;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
 }
-.recomendados div{
+
+.recomendados div {
     position: relative;
     min-height: 200px;
     max-height: 400px;
 }
-.recomendados .cover{
+
+.recomendados .cover {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
-.recomendados .star{
+
+.recomendados .star {
     position: absolute;
     width: 40px;
     height: 40px;
     right: 10px;
     top: 10px;
 }
-.recomendados .paragraph{
+
+.recomendados .paragraph {
     overflow-y: scroll;
     scrollbar-width: none;
     line-height: 20px;
@@ -113,37 +130,42 @@
     margin: 10px;
 }
 
-.recomendados .paragraph::-webkit-scrollbar{
+.recomendados .paragraph::-webkit-scrollbar {
     display: none;
 }
 
-.reproduccion{
+.reproduccion {
     grid-area: reproduccion;
     width: 100%;
     margin: auto 0;
     background-color: var(--primary-color);
     border-radius: 5px;
 }
-.reproduccion audio{
+
+.reproduccion audio {
     width: 100%;
 }
+
 audio::-webkit-media-controls-panel {
     background-color: var(--primary-color);
 }
+
 @media (max-width: 768px) {
-    .reproduccion{
+    .reproduccion {
         position: fixed;
         bottom: 10px;
     }
 }
-.footer{
+
+.footer {
     grid-area: footer;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border: 1px solid var(--dark-gray);
 }
-@media (max-width: 768px){
-    .footer{
+
+@media (max-width: 768px) {
+    .footer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
