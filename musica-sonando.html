@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5d2264350c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/layouts.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/musica_sonando.css">
-    <title>Música sonando</title>
+    <link rel="stylesheet" href="styles/search.css">
+    <link rel="stylesheet" href="styles/favoritas.css">
+    <title>Mis canciones favoritas</title>
 </head>
+
 <body>
     <div class="grid_container">
         <header class="header">
-            <h2>SPOTILAM</h2>
+            <h1>Nombre de la canción </h1>
             <div class="user_info">
                 <div>
                     <p>Nombre usuario</p>
@@ -26,31 +29,80 @@
         </header>
         <nav class="menu">
             <ul>
-                <li><a href="pantalla-principal.html" class="home">Home</a></li>
-                <li><a href="busqueda.html" class="buscar">Buscar</a></li>
+                <li><a href="pantalla-principal.html">Home</a></li>
+                <li><a href="busqueda.html">Buscar</a></li>
                 <li><a href="mis-albumnes.html">Mis albums</a></li>
                 <li><a href="mis-favoritas.html">Mis Favoritas</a></li>
             </ul>
         </nav>
         <main class="main">
-            <section class="ms_section">
-                    <a href="musica-sonando.html"><img src="img/album8.jpg" alt="album" class="ms_album8"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrella">
-                    <ul>
-                        <li><h4>Ocean Eyes</h4></li>
-                        <li>3:20</li>
-                        <li>Billie Eilish</li>
-                        <li>Dont smile at me</li>
-                        <li>2017</li>
-                    </ul>
+
+            <section class="favoritas_conteiner">
+                <div class="caja caja-1"><i class="fa-solid fa-play"></i></div>
+                <div class="caja caja-2">Cancion</div>
+                <div class="caja caja-3">Album</div>
+                <div class="caja caja-4">Duracion</div>
+                <div class="caja caja-5">Reproducciones</div>
+                <div class="caja play"><i class="fa-solid fa-play"></i></div>
+                <div class="caja cancion">Cancion 1 <i class="fa-solid fa-star" style="color: #e4f500;"></i></i></div>
+                <div class="caja album">Album 1 </div>
+                <div class="caja duracion">1:00</div>
+                <div class="caja reproducciones">1500</div>
+                <div class="caja play"><i class="fa-solid fa-play"></i></div>
+                <div class="caja cancion">Cancion 2 <i class="fa-solid fa-star" style="color: #e4f500;"></i></i></div>
+                <div class="caja album">Album 2 </div>
+                <div class="caja duracion">2:00</div>
+                <div class="caja reproducciones">2500</div>
+                <div class="caja play"><i class="fa-solid fa-play"></i></div>
+                <div class="caja cancion">Cancion 3 <i class="fa-solid fa-star" style="color: #e4f500;"></i></i></div>
+                <div class="caja album">Album 3 </div>
+                <div class="caja duracion">3:00</div>
+                <div class="caja reproducciones">3500</div>
+                <div class="caja play"><i class="fa-solid fa-play"></i></div>
+                <div class="caja cancion">Cancion 4<i class="fa-solid fa-star" style="color: #e4f500;"></i></i></div>
+                <div class="caja album">Album 4 </div>
+                <div class="caja duracion">4:00</div>
+                <div class="caja reproducciones">4500</div>
+                <div class="caja play"><i class="fa-solid fa-play"></i></div>
+                <div class="caja cancion">Cancion 5 <i class="fa-solid fa-star" style="color: #e4f500;"></i></i></div>
+                <div class="caja album">Album 5 </div>
+                <div class="caja duracion">5:00</div>
+                <div class="caja reproducciones">5500</div>
+                <div class="caja play"><i class="fa-solid fa-play"></i></div>
+                <div class="caja cancion">Cancion 6 <i class="fa-solid fa-star" style="color: #e4f500;"></i></i></div>
+                <div class="caja album">Album 6 </div>
+                <div class="caja duracion">6:00</div>
+                <div class="caja reproducciones">6500</div>
+                <div class="caja play"><i class="fa-solid fa-play"></i></div>
+                <div class="caja cancion">Cancion 7 <i class="fa-solid fa-star" style="color: #e4f500;"></i></i></div>
+                <div class="caja album">Album 7 </div>
+                <div class="caja duracion">7:00</div>
+                <div class="caja reproducciones">7500</div>
+                <div class="caja play"><i class="fa-solid fa-play"></i></div>
+                <div class="caja cancion">Cancion 8 <i class="fa-solid fa-star" style="color: #e4f500;"></i></i></div>
+                <div class="caja album">Album 8 </div>
+                <div class="caja duracion">8:00</div>
+                <div class="caja reproducciones">8500</div>
+                <div class="caja play"><i class="fa-solid fa-play"></i></div>
+                <div class="caja cancion">Cancion 9 <i class="fa-solid fa-star" style="color: #e4f500;"></i></i></div>
+                <div class="caja album">Album 9 </div>
+                <div class="caja duracion">9:00</div>
+                <div class="caja reproducciones">9500</div>
+
             </section>
+
+
         </main>
         <section class="recomendados">
             <div>
-                <img src="img/album_recomendado.jpg" alt="album" class="cover">
+                <img src="img/album16.jpg" alt="album" class="cover">
                 <img src="img/estrella.png" alt="estrella" class="star">
             </div>
-            <small class="paragraph"> "Sauce Boyz" es el primer albúm de Eladio Carrion, lanzado en enero de 2020. Compuesto por 16 canciones con colaboraciones de varias estrellas del género. Incluye el tema  “Hielo” con Jhay Cortez. “3 Am” con Brytiago, “Mala Mía” con Miky Woodz y “Lluvia (remix)” con Rauw Alejandro y Amenzazzy.</small>
+            <small class="paragraph"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat labore modi adipisci nobis, praesentium
+                inventore excepturi, maiores ullam, vero necessitatibus tempora ducimus. Sunt laboriosam, quae rerum
+                quisquam consequatur assumenda porro!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat,
+                minus nemo. Voluptate dignissimos tempore in voluptas dolor perferendis cupiditate, accusamus
+                perspiciatis laudantium debitis incidunt explicabo? Consequuntur hic sit illum perspiciatis?</small>
         </section>
         <section class="reproduccion">
             <audio controls>
