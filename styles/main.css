@@ -104,7 +104,7 @@ body {
   padding: 5px 5px;
 }
 
-@media(max-width: 720px) {
+@media(max-width: 768px) {
   .footer p {
     font-size: 0.6em;
   }
