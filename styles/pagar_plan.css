@@ -1,8 +1,14 @@
-.header{
+@import url("./base.css");
+@import url("./header_footer.css");
+.main{
+    /* max-width: 1024px; */
+    margin: 0 auto;
+}
+/* .header{
     display: flex;
     justify-content: end;
     align-items: center;
-}
+} */
 .plan_elegido{
     display: flex;
     flex-direction: column;

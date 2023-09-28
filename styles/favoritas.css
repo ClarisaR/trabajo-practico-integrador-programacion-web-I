@@ -1,23 +1,55 @@
-
-
-.favoritas_conteiner {
-    display: grid;
-    grid-template-columns: 7% 25% 20% 15% 33%;
-    grid-template-rows: minmax(11%, auto);
+@import url("./base.css");
+@import url("./header_footer.css");
+@import url("./descripcion.css");
+@import url("./reproductor.css");
+.main{
+    width: 100%;
     height: 100%;
-    overflow-y: auto; 
-  
-
+    display: flex;
+    flex-direction: column;
 }
-
+.titulos_container{
+    padding-right: 8px;
+}
+.titulos{
+    width: 100%;
+    border-collapse: collapse;
+}
+.favoritas_container{
+    height: auto;
+    position: relative;
+    display: block;
+    text-align: center;
+    overflow: auto;
+}
+.favoritas_container::-webkit-scrollbar, .albums::-webkit-scrollbar{
+    width: 8px;
+}
+.favoritas_container::-webkit-scrollbar-thumb, .albums::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+.tbody{
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+}
+tr{
+    height: 40px;
+}
+td, th{
+    border: 1px solid white;
+}
 .favoritas_conteiner .caja {
    
-    height: 40px; 
+    /* height: 40px;  */
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid black;
     text-align: center;
+    /* box-shadow:0 0 0 5px black; */
+    /* palegreen */
 }
 
 .menu .mis_favoritas{
@@ -25,4 +57,53 @@
     color: var(--white);
     border-radius: 5px;
 }
- 
+
+td:nth-child(1),th:nth-child(1){
+    /* padding: 10px 0px; */
+    width: 60px;
+    /* box-sizing: border-box; */
+}
+td:nth-child(2),th:nth-child(2){
+    width: auto;
+    position: relative;
+}
+td:nth-child(3),th:nth-child(3){
+    width: 26%;
+    position: relative;
+}
+td:nth-child(4),th:nth-child(4){
+    width: 12%;
+}
+td:nth-child(5),th:nth-child(5){
+    width: 22%;
+}
+
+.star{
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0px;
+    right: 10px;
+    /* background-color: red; */
+    background-image: url("../img/estrella.png");
+    background-size: 40px 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.star:hover{
+    cursor: pointer;
+    background-image: url("../img/icon_favorite.png");
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    /* opacity: 0.5; */
+}
+.fa-play:hover{
+    color: var(--primary-color);
+}
+@media (max-width: 768px) {
+    .titulos_container{
+        padding: 0;
+    }
+    
+}

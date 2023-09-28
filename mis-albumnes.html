@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis álbumnes favoritos</title>
-    <link rel="stylesheet" href="styles/layouts.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- <link rel="stylesheet" href="styles/layouts.css"> -->
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
     <link rel="stylesheet" href="styles/albunes.css">
 </head>
 <body>
     <div class="grid_container">
-        <header class="header">
+        <header class="header" id="header">
             <h2>Mis albums favoritos</h2>
             <div class="user_info">
                 <div>
@@ -30,12 +30,15 @@
                 <li><a class="option selected" href="mis-albumnes.html" >Mis albums</a></li>
                 <li><a class="option" href="mis-favoritas.html">Mis Favoritas</a></li>
             </ul>
-            <div class="recomendados">
-                <img src="img/album_recomendado.jpg" alt="album" class="cover">
-                <!-- <img src="img/estrella.png" alt="estrella" class="star"> -->
-                <span class="star"></span>
-            </div>
         </nav>
+        <div class="recomendados">
+            <img src="img/album_recomendado.jpg" alt="album" class="cover">
+            <!-- <img src="img/estrella.png" alt="estrella" class="star"> -->
+            <span class="star"></span>
+        </div>
+        <section class="descripcion">
+            <small class="paragraph"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat labore modi adipisci nobis, praesentium inventore excepturi, maiores ullam, vero necessitatibus tempora ducimus. Sunt laboriosam, quae rerum quisquam consequatur assumenda porro!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, minus nemo. Voluptate dignissimos tempore in voluptas dolor perferendis cupiditate, accusamus perspiciatis laudantium debitis incidunt explicabo? Consequuntur hic sit illum perspiciatis? asdfasdfasdfasdfasd asdfas asdfa asdfasd asdfasd  asdfasdf  asdf asdff</small>
+        </section>
         <main class="main">
             <section class="albums">
                 <div class="contenedor">
@@ -112,14 +115,13 @@
                 </div>
             </section>
         </main>
-        <section class="descripcion">
-            <small class="paragraph"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat labore modi adipisci nobis, praesentium inventore excepturi, maiores ullam, vero necessitatibus tempora ducimus. Sunt laboriosam, quae rerum quisquam consequatur assumenda porro!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, minus nemo. Voluptate dignissimos tempore in voluptas dolor perferendis cupiditate, accusamus perspiciatis laudantium debitis incidunt explicabo? Consequuntur hic sit illum perspiciatis? asdfasdfasdfasdfasd asdfas asdfa asdfasd asdfasd  asdfasdf  asdf asdff</small>
-        </section>
+        
         <section class="reproduccion">
             <audio controls>
-                <source type="audio/mp3">
+                <source type="audio/mp3" src="music/Billie Eilish wish you were gay.mp3">
             </audio>
         </section>
+        <a class="btn_top" href="#header"></a>
         <footer class="footer">
             <p>Integrante 1: Clarisa Rodriguez</p>
             <p>Integrante 2: Pablo Barcena</p>

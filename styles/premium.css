@@ -1,8 +1,17 @@
+@import url("./base.css");
+@import url("./header_footer.css");
+.grid_container{
+    padding: 5px;
+}
 .titulo_premium {
     margin: 20px 30px;
 }
+.header{
+    justify-content: end;
+    margin: 12px 0;
+}
 .plan_premium {
-    margin: 80px 20px;
+    margin: 40px 20px;
 }
 .plan_premium form {
     margin: auto;
@@ -15,6 +24,7 @@
 }
 .tipoDePlan {
     padding: 30px 30px;
+    margin: auto;
 }
 .tipoDePlan img {
     margin: auto;
@@ -45,4 +55,14 @@
     cursor: pointer;
     position: relative;
     left: 50%;
+}
+/*  */
+.button_container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.a_button{
+    text-decoration: none;
+    font-size: 0.8em;
 }

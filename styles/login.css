@@ -1,3 +1,5 @@
+@import url("./base.css");
+@import url("./header_footer.css");
 .main{
     display: flex;
     justify-content: center;

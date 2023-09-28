@@ -8,11 +8,12 @@
 
     <link rel="stylesheet" href="styles/premium.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/profile_premium_and_pagar_plan.css">
+    <!-- <link rel="stylesheet" href="styles/profile_premium_and_pagar_plan.css"> -->
 
 </head>
 
 <body>
+    <section class="grid_container">
         <header class="header">
             <div class="user_info"> <!---->
                 <div>
@@ -24,80 +25,78 @@
                     <img src="img/avatar.png" class="avatar" alt="avatar"> <!---->
                 </a>
             </div>
-    </header>
-
-    <main>
-        <div class="titulo_premium">
-            <h1>PLANES PREMIUM</h1>
-        </div>
-
-        <section class="plan_premium">
-            <form action="#" method="post">
-                <article class="tipoDePlan">
-                    <h2>Plan Mensual</h2>
-                    <img src="img/plan_mensual.png" alt="plan_mensual"> <!---->
-
-                    <div> <!--class="parrafo"-->
-                        <ul>
-                            <li>✔ A <strong>$1499</strong> por mes</li>
-                            <li>✔ Escucha música sin anuncios</li>
-                            <li>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</li>
-                            <li>✔ Arma tus propios playlist</li>
-                        </ul>
-                    </div>
-                    <label for="plan"></label>
-                    <input id="plan_mensual" type="radio" name="plan" value="plan_mensual" class="planRadioButton">
-                </article>
-
-                <article class="tipoDePlan">
-                    <h2>Plan Anual</h2>
-                    <img src="img/plan_anual.png" alt="plan_anual"> <!---->
-
-                    <div> <!--class="parrafo"-->
-                        <ul>
-                            <li>✔ A <strong>$9999</strong> por año</li>
-                            <li>✔ Escucha música sin anuncios</li>
-                            <li>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</li>
-                            <li>✔ Arma tus propios playlist</li>
-                        </ul>
-                    </div>
-                    <label for="plan"></label>
-                    <input id="plan" type="radio" name="plan" value="plan_anual" class="planRadioButton">
-                </article>
-
-                <article class="tipoDePlan">
-                    <h2>Plan Infinito</h2>
-                    <img src="img/plan_infinito.png" alt="plan_infinito"> <!---->
-                    <div> <!--class="parrafo"-->
-                        <ul>
-                            <li>✔ Un <strong>único</strong> pago de $29.999</li>
-                            <li>✔ Escucha música sin anuncios</li>
-                            <li>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</li>
-                            <li>✔ Arma tus propios playlist</li>
-                            <li>✔ Música de por vida</li>
-                        </ul>
-                    </div>
-                    <label for="plan"></label>
-                    <input id="plan" type="radio" name="plan" value="plan_infinito" class="planRadioButton">
-                </article>
-            </form>
-        </section>
-
-        <section class="button_container"> <!--class="card"-->
-            <a href="pantalla-principal.html" class="button a_button">Cancelar</a> <!--class="buttonPagar"-->
-            <a href="pagar-plan.html" class="button a_button">Avanzar</a>
-        </section>
-    </main>
-    <footer class="footer">
-        <p>Integrante 1: Clarisa Rodriguez</p>
-        <p>Integrante 2: Pablo Barcena</p>
-        <p>Integrante 3: Nicolas Barrionuevo</p>
-        <p>Integrante 4: Cristian Aspi</p>
-        <p>Integrante 5: Facundo De Marco</p>
-        <p>Integrante 6: Nadia Spinelli</p>
-    </footer>
-
-
+        </header>
+        <main>
+            <div class="titulo_premium">
+                <h1>PLANES PREMIUM</h1>
+            </div>
+    
+            <section class="plan_premium">
+                <form action="#" method="post">
+                    <article class="tipoDePlan">
+                        <h2>Plan Mensual</h2>
+                        <img src="img/plan_mensual.png" alt="plan_mensual"> <!---->
+    
+                        <div> <!--class="parrafo"-->
+                            <ul>
+                                <li>✔ A <strong>$1499</strong> por mes</li>
+                                <li>✔ Escucha música sin anuncios</li>
+                                <li>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</li>
+                                <li>✔ Arma tus propios playlist</li>
+                            </ul>
+                        </div>
+                        <label for="plan"></label>
+                        <input id="plan_mensual" type="radio" name="plan" value="plan_mensual" class="planRadioButton">
+                    </article>
+    
+                    <article class="tipoDePlan">
+                        <h2>Plan Anual</h2>
+                        <img src="img/plan_anual.png" alt="plan_anual"> <!---->
+    
+                        <div> <!--class="parrafo"-->
+                            <ul>
+                                <li>✔ A <strong>$9999</strong> por año</li>
+                                <li>✔ Escucha música sin anuncios</li>
+                                <li>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</li>
+                                <li>✔ Arma tus propios playlist</li>
+                            </ul>
+                        </div>
+                        <label for="plan"></label>
+                        <input id="plan" type="radio" name="plan" value="plan_anual" class="planRadioButton">
+                    </article>
+    
+                    <article class="tipoDePlan">
+                        <h2>Plan Infinito</h2>
+                        <img src="img/plan_infinito.png" alt="plan_infinito"> <!---->
+                        <div> <!--class="parrafo"-->
+                            <ul>
+                                <li>✔ Un <strong>único</strong> pago de $29.999</li>
+                                <li>✔ Escucha música sin anuncios</li>
+                                <li>✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</li>
+                                <li>✔ Arma tus propios playlist</li>
+                                <li>✔ Música de por vida</li>
+                            </ul>
+                        </div>
+                        <label for="plan"></label>
+                        <input id="plan" type="radio" name="plan" value="plan_infinito" class="planRadioButton">
+                    </article>
+                </form>
+            </section>
+    
+            <section class="button_container"> <!--class="card"-->
+                <a href="pantalla-principal.html" class="button a_button">Cancelar</a> <!--class="buttonPagar"-->
+                <a href="pagar-plan.html" class="button a_button">Avanzar</a>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>Integrante 1: Clarisa Rodriguez</p>
+            <p>Integrante 2: Pablo Barcena</p>
+            <p>Integrante 3: Nicolas Barrionuevo</p>
+            <p>Integrante 4: Cristian Aspi</p>
+            <p>Integrante 5: Facundo De Marco</p>
+            <p>Integrante 6: Nadia Spinelli</p>
+        </footer>
+    </section>
 </body>
 
 </html>

@@ -1,3 +1,7 @@
+@import url("./base.css");
+@import url("./header_footer.css");
+@import url("./descripcion.css");
+@import url("./reproductor.css");
 .header .search_input{
     width: 60%;
     border-radius: 8px;
