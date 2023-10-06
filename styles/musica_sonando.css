@@ -17,18 +17,6 @@
     border-radius: 4px;
 }
 
-@media(max-width: 375px) {
-    .favoritas_conteiner {
-        font-size: 0.5em;
-    }
-}
-
-@media(max-width: 768px) {
-    .favoritas_conteiner {
-        font-size: 0.7em;
-    }
-}
-
 .favoritas_conteiner .caja {
 
     height: 40px;
@@ -45,3 +33,19 @@
     color: var(--white);
     border-radius: 5px;
 }
+
+/* Responsive */
+
+
+@media(max-width: 375px) {
+    .favoritas_conteiner {
+        font-size: 0.5em;
+    }
+}
+
+@media(max-width: 768px) {
+    .favoritas_conteiner {
+        font-size: 0.7em;
+    }
+}
+
