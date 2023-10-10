@@ -23,7 +23,7 @@
 }
 
 .favoritas_conteiner .caja {
-    box-sizing: border-box;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
