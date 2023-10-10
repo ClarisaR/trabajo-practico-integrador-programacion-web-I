@@ -1,22 +1,28 @@
 .favoritas_conteiner {
     display: grid;
-    grid-template-columns: 7% 25% 20% 15% 33%;
+    grid-template-columns: 5% 25% 25% 17% 28%;
     grid-template-rows: minmax(11%, auto);
+    gap: 0.1em;
     height: 100%;
+    overflow-x: hidden;
     overflow-y: auto;
-
-
 }
-
+@media(max-width: 768px) {
+    .favoritas_conteiner{
+        height: auto;
+        grid-template-rows: repeat(9, auto)
+    }
+}
 .favoritas_conteiner::-webkit-scrollbar {
     width: 8px;
 }
-
 .favoritas_conteiner::-webkit-scrollbar-thumb {
     background: var(--primary-color);
     border-radius: 4px;
 }
-
+.fa-star{
+    padding-left: 20px;
+}
 @media(max-width: 375px) {
     .favoritas_conteiner {
         font-size: 0.5em;
@@ -30,15 +36,24 @@
 }
 
 .favoritas_conteiner .caja {
-
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    background-color: var(--secondary-color);
     text-align: center;
+    padding: 5px;
 }
-
+@media(max-width: 768px) {
+    .favoritas_conteiner .caja{
+        font-size: 0.9em;
+    }
+}
+@media(max-width: 375px) {
+    .favoritas_conteiner .caja{
+        font-size: 0.8em;
+    }
+}
 .menu .mis_favoritas,
 .menu .mis_favoritas:hover {
     background-color: var(--primary-color);
