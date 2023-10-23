@@ -74,15 +74,18 @@
     margin-top: 20px;
     align-self: center;
 }
-
-/*.footer{
-    grid-area: footer;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border: 1px solid var(--dark-gray);
+.contenedor_msj_error{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
-@media (max-width: 768px){
-    .footer{
-        grid-template-columns: repeat(2, 1fr);
+.mensaje_error{
+    display: none;
+    color: red;
+    margin-top: 5px;
+}
+@media (max-width: 768px) {
+    .mensaje_error{
+        width: 50%;
     }
-}*/
+}

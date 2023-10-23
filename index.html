@@ -24,7 +24,10 @@
                         <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required
                             minlength="8">
                     </div>
-                    <button type="submit" class="button button_full">Iniciar sesión</button>
+                    <div class="contenedor_msj_error">
+                        <small id="mensaje_error" class="mensaje_error">El usuario y/o contraseña es incorrecto</small>
+                    </div>
+                    <button type="submit" class="button button_full" id="boton_login">Iniciar sesión</button>
                 </form>
                 <a href="registro.html">Registrarme</a>
             </div>
@@ -39,18 +42,6 @@
             <p>Integrante 6: Nadia Spinelli</p>
         </footer>
     </div>
-    <script>
-        function onFormSubmit(event) {
-            event.preventDefault();
-
-            //Aca se haria la peticion a una API Rest por ejemplo.
-            // La cual validaria el inicio de sesion y nos concederia el acceso o lo denegaria.
-            // Simulamos que nos permitio el acceso redirigiendo a la vista de pantalla principal.
-            window.location.href = "pantalla-principal.html";
-        }
-        let form = document.getElementById("form_inicio_sesion");
-        form.addEventListener("submit", onFormSubmit);
-    </script>
+    <script src="js/login.js"></script>
 </body>
-
 </html>

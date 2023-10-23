@@ -21,26 +21,34 @@
                             <label for="nombre">Nombre</label>
                             <input type="text" name="nombre" id="nombre" placeholder="Nombre" required minlength="5">
                         </div>
+                    
                         <div class="field">
                             <label for="contrasenia">Contraseña</label>
                             <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required
                                 minlength="8">
                         </div>
+                    
                         <div class="field">
                             <label for="repetir-contrasenia">Repetir Contraseña</label>
-                            <input type="password" name="repetir-contrasenia" id="repetir-contrasenia"
+                            <input type="password" name="repetir-contrasenia" id="repetir_contrasenia"
                                 placeholder="Repetir contraseña" required minlength="8">
+                        </div>
+                        <div class="contenedor_msj_error">
+                            <small class="mensaje_error" id="mensaje_error_contrasenia">Las contraseñas no coinciden</small>
                         </div>
                         <div class="field">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Email" required>
+                            <input type="email" name="email" id="email" placeholder="ejemplo@alumno.edu.arr" required>
+                        </div>
+                        <div class="contenedor_msj_error">
+                            <small class="mensaje_error" id="mensaje_error_email">Asegurate de que tu dirección de correo electrónico sea similar a 'ejemplo@alumno.edu.ar'</small>
                         </div>
                         <div class="field">
                             <label for="fecha-nacimiento">Fecha de nacimiento</label>
-                            <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" required>
+                            <input type="date" name="fecha-nacimiento" id="fecha_nacimiento" required>
                         </div>
                     </section>
-                    <button type="submit" class="button">Registrarme</button>
+                    <button type="submit" class="button" id="boton_registro">Registrarme</button>
                 </form>
                 <a href="premium.html" class="premium">Premium</a>
             </div>
@@ -54,18 +62,7 @@
             <p>Integrante 6: Nadia Spinelli</p>
         </footer>
     </div>
-    <script>
-        function onFormSubmit(event) {
-            event.preventDefault();
-
-            //Aca se haria la peticion a una API Rest por ejemplo.
-            // La cual validaria el registro y nos concederia el acceso o lo denegaria.
-            // Simulamos que nos permitio el acceso redirigiendo a la vista de index (inicio de sesion).
-            window.location.href = "index.html";
-        }
-        let form = document.getElementById("form_registro");
-        form.addEventListener("submit", onFormSubmit);
-    </script>
+    <script src="js/register.js"></script>
 </body>
 
 </html>
