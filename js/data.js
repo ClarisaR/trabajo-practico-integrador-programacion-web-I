@@ -1,4 +1,4 @@
-export const artistas = [
+const artistas = [
     {
         id: 1,
         nombre: 'Dua Lipa',
@@ -83,7 +83,7 @@ export const artistas = [
 
 
 
-export const albumes = [
+const albumes = [
     {
         id: 1,
         nombre: 'Future Nostalgia',
@@ -182,7 +182,7 @@ export const albumes = [
     }
 ]
 
-export const canciones = [
+const canciones = [
     {
         nombre: 'Future Nostalgia',
         duracion: '3:04',

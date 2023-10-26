@@ -1,14 +1,18 @@
-
-import { albumes, artistas, canciones } from './data.js'
-
-
+cargarNombreDeUsuarioLogueado();
 // todos los nodos que utilizaré
 const albumesNodo = document.getElementById('albumes');
 const artistasNodo = document.getElementById('artistas');
 const cancionesNodo = document.getElementById('canciones');
 const nodoInput = document.getElementById('buscar');
+const nodoCerrarSesion = document.getElementById('cerrar_sesion')
 
+//todos los listener
 nodoInput.addEventListener('keyup', actualizarResultados);
+nodoCerrarSesion.addEventListener('click' , cerrarSesion)
+
+
+
+
 function actualizarResultados(evento) {
     const palabraABuscar = nodoInput.value;
     actualizar(palabraABuscar, artistas, cargarArtistas)
@@ -95,4 +99,5 @@ function cargarCanciones(canciones) {
     }
 }
 cargarCanciones(canciones);
+
 

@@ -24,7 +24,7 @@ function iniciar_sesion(evento) {
         }
     }
     if (usuarioEncontrado) {
-        localStorage.setItem('usuario', usuario);
+        localStorage.setItem('usuarioLogueado', usuario);
         window.location.href = 'pantalla-principal.html';
     } else {
         mostrarMensajeError('mensaje_error');
