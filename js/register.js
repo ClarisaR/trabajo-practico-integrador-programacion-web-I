@@ -23,8 +23,8 @@ function registrarUsuario(evento) {
         mostrarMensajeDeError('mensaje_error_contrasenia');
         hayError = true;
     }
-    let patronEmail = /^(?![_0-9])[\w0-9]{4,}@alumno\.edu\.ar$/
-    let emailModelo = "ejemplo@alumno.edu.ar"
+    let patronEmail = /^(?![_0-9])[\w0-9]{4,}@[\w.-]+\.[a-zA-Z]{2,}\.ar$/;
+    let emailModelo = "ejemplo@alumno.edu.ar";
 
     if (!patronEmail.test(email)) {
         mostrarMensajeDeError('mensaje_error_email');

@@ -85,11 +85,11 @@
     grid-area: main;
 }
 
-.albums::-webkit-scrollbar {
+.grid::-webkit-scrollbar {
     width: 8px;
 }
 
-.albums::-webkit-scrollbar-thumb {
+.grid::-webkit-scrollbar-thumb {
     background: var(--primary-color);
     border-radius: 4px;
 }

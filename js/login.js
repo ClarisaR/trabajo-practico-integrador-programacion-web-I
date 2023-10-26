@@ -1,6 +1,7 @@
 document.getElementById('form_inicio_sesion').addEventListener('submit', iniciar_sesion);
 function iniciar_sesion(evento) {
     evento.preventDefault();
+    ocultarMensajeDeError();
     let usuario = document.getElementById('usuario').value;
     let contrasenia = document.getElementById('contrasenia').value;
 
@@ -10,7 +11,7 @@ function iniciar_sesion(evento) {
 
     let usuarioEncontrado = false;
     if (usuarios == null) {
-        mostrarMensajeError();
+        mostrarMensajeError('mensaje_error');
         return;
     }
 
@@ -26,11 +27,11 @@ function iniciar_sesion(evento) {
         localStorage.setItem('usuario', usuario);
         window.location.href = 'pantalla-principal.html';
     } else {
-        mostrarMensajeError();
+        mostrarMensajeError('mensaje_error');
     }
 }
-function mostrarMensajeError() {
-    let elemento = document.getElementById('mensaje_error');
+function mostrarMensajeError(id) {
+    let elemento = document.getElementById(id);
     elemento.style.display = 'block';
 }
 function invertirContrasenia(contrasenia) {
@@ -38,4 +39,7 @@ function invertirContrasenia(contrasenia) {
     let primeraMitad = contrasenia.slice(0, mitad);
     let segundaMitad = contrasenia.slice(mitad);
     return segundaMitad + primeraMitad;
+}
+function ocultarMensajeDeError(){
+    document.getElementById('mensaje_error').style.display = 'none';
 }
