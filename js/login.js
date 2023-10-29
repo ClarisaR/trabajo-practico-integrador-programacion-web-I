@@ -8,8 +8,6 @@ function iniciar_sesion(evento) {
     let usuarios = JSON.parse(localStorage.getItem('usuarios'));
     // JSON.parse
     // JSON.stringify
-
-    let usuarioEncontrado = false;
     if (usuarios == null) {
         mostrarMensajeError('mensaje_error');
         return;
@@ -17,14 +15,11 @@ function iniciar_sesion(evento) {
 
     let contraseniaAlmacenada = invertirContrasenia(contrasenia);
 
-    for (let i = 0; i < usuarios.length; i++) {
-        if (usuarios[i].usuario == usuario && usuarios[i].contrasenia == contraseniaAlmacenada) {
-            usuarioEncontrado = true;
-            break;
-        }
-    }
-    if (usuarioEncontrado) {
-        localStorage.setItem('usuarioLogueado', usuario);
+    const usuarioEncontrado = usuarios.find(usuarioActual => usuarioActual.usuario == usuario)
+
+
+    if (usuarioEncontrado && usuarioEncontrado.contrasenia == contrasenia) {
+        localStorage.setItem('usuarioLogueado', JSON.stringify(usuarioEncontrado));
         window.location.href = 'pantalla-principal.html';
     } else {
         mostrarMensajeError('mensaje_error');
@@ -40,6 +35,6 @@ function invertirContrasenia(contrasenia) {
     let segundaMitad = contrasenia.slice(mitad);
     return segundaMitad + primeraMitad;
 }
-function ocultarMensajeDeError(){
+function ocultarMensajeDeError() {
     document.getElementById('mensaje_error').style.display = 'none';
 }
