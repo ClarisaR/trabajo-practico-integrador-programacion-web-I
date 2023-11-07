@@ -7,7 +7,6 @@
     <title>Mis álbumnes favoritos</title>
     <link rel="stylesheet" href="styles/layouts.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/albunes.css">
 </head>
 
 <body>
@@ -16,8 +15,8 @@
             <h2>Mis albums favoritos</h2>
             <div class="user_info">
                 <div>
-                    <p>Nombre usuario</p>
-                    <a href="index.html" class="cerrar_sesion">Cerrar sesión</a>
+                    <p id="nombre_usuario">User</p>
+                    <a href="index.html" class="cerrar_sesion" id="cerrar_sesion">Cerrar sesión</a>
                 </div>
 
                 <a href="perfil.html">
@@ -34,79 +33,8 @@
             </ul>
         </nav>
         <main class="main">
-            <section class="albums">
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album1.jpg" alt="album" class="foto"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album2.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album3.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album4.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album5.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album6.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album7.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album8.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album9.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album10.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album11.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album12.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album13.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album14.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album15.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album16.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album17.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
-                <div class="contenedor">
-                    <a href="musica-sonando.html"><img src="img/album18.jpg" alt="album"></a>
-                    <img src="img/estrella.png" alt="estrella" class="estrellita">
-                </div>
+            <section class="grid">
+                <section class="albums" id="albumes"></section>
             </section>
         </main>
         <section class="recomendados">
@@ -131,6 +59,9 @@
             <p>Integrante 2: Pablo Barcena</p>
         </footer>
     </div>
+    <script src="js/data.js"></script>
+    <script src="js/session_management.js"></script>
+    <script src="js/favorite_albums.js"></script>
 </body>
 
 </html>
