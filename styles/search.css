@@ -25,7 +25,7 @@
     border-radius: 5px;
 }
 
-.main .grid {
+/*.main .grid {
     overflow-y: auto;
     height: 100%;
 }
@@ -74,4 +74,4 @@
     .main .albums .info, .main .artistas .info, .main .canciones .info{
         font-size: 0.9em;
     }
-}
+}*/

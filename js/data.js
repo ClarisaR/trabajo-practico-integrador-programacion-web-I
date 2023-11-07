@@ -88,97 +88,113 @@ const albumes = [
         id: 1,
         nombre: 'Future Nostalgia',
         portada: 'album1',
-        id_artista: 1
+        id_artista: 1,
+        estrella: 'estrella'
     },
     {
         id: 2,
         nombre: 'Fine Line',
         portada: 'album2',
-        id_artista: 2
+        id_artista: 2,
+        estrella: 'estrella'
     },
     {
         id: 3,
         nombre: 'La Nena de Argentina',
         portada: 'album3',
-        id_artista: 3
+        id_artista: 3,
+        estrella: 'estrella'
     },
     {
         id: 4,
         nombre: 'Alma',
         portada: 'album4',
-        id_artista: 4
+        id_artista: 4,
+        estrella: 'estrella'
     },
     {
         id: 5,
         nombre: 'Hot Pink',
         portada: 'album5',
-        id_artista: 5
+        id_artista: 5,
+        estrella: 'estrella'
     },
     {
         id: 6,
         nombre: 'Plastic Hearts',
         portada: 'album6',
-        id_artista: 6
+        id_artista: 6,
+        estrella: 'estrella'
     },
     {
         id: 7,
         nombre: 'Ysysmo',
         portada: 'album7',
-        id_artista: 7
+        id_artista: 7,
+        estrella: 'estrella'
     },
     {
         id: 8,
         nombre: 'Happier Than Ever',
         portada: 'album8',
-        id_artista: 8
+        id_artista: 8,
+        estrella: 'estrella'
     },
     {
         id: 9,
         nombre: 'Abbey Road',
         portada: 'album9',
-        id_artista: 9
+        id_artista: 9,
+        estrella: 'estrella'
     },
      {
         id: 10,
         nombre: 'Sixdo',
         portada: 'album10',
-        id_artista: 10
+        id_artista: 10,
+        estrella: 'estrella'
     },
      {
         id: 11,
         nombre: '1989',
         portada: 'album11',
-        id_artista: 11
+        id_artista: 11,
+        estrella: 'estrella'
     },
    {
         id: 12,
         nombre: 'Tu crees en mi?',
         portada: 'album12',
-        id_artista: 12
+        id_artista: 12,
+        estrella: 'estrella'
     },
     {
         id: 13,
         nombre: 'Adele 21',
         portada: 'album13',
-        id_artista: 13
+        id_artista: 13,
+        estrella: 'estrella'
     },
      {
         id: 14,
         nombre: 'Un verano sin ti',
         portada: 'album14',
-        id_artista: 14
+        id_artista: 14,
+        estrella: 'estrella'
     },
      {
         id: 15,
         nombre: 'The Dark Side of the Moon',
         portada: 'album15',
-        id_artista: 15
+        id_artista: 15,
+        estrella: 'estrella'
     },
      {
         id: 16,
         nombre: 'Starboy',
         portada: 'album16',
-        id_artista: 16
+        id_artista: 16,
+        estrella: 'estrella'
     }
 ]
 

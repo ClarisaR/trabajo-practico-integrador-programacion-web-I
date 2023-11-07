@@ -4,7 +4,7 @@
     border-radius: 5px;
 }
 
-.main .albums {
+/*.main .albums {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     height: 100%;
@@ -18,7 +18,7 @@
 
 }
 
-.contenedor .estrellita {
+.main .grid .contenedor .estrellita {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -41,4 +41,4 @@
 .main .albums a img {
     width: 100%;
     border-radius: 10px;
-}
+}*/
