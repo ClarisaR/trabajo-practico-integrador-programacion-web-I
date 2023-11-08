@@ -18,8 +18,8 @@ function cargarAlbumes(albumes) {
     for (const album of albumes) {
         const { id, nombre, portada, id_artista, estrella } = album
         const nodoAlbum = document.createElement('a')
-        nodoAlbum.href = 'musica-sonando.html';
-        nodoAlbum.id = 'enlace'
+        nodoAlbum.href = `musica-sonando.html?id_album=${id}`;
+        nodoAlbum.dataset.id_enlace_album = id
         const nodoPortada = document.createElement('img')
         nodoPortada.src = `img/${portada}.jpg`;
         nodoPortada.alt = portada;

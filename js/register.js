@@ -55,7 +55,8 @@ function registrarUsuario(evento) {
         repetirContrasenia: repetirContrasenia,
         email: email,
         fechaNacimiento: fechaNacimiento,
-        albumesFavoritos: []
+        albumesFavoritos: [],
+        cancionesFavoritas: []
     };
 
     usuariosGuardados.push(nuevoUsuario);

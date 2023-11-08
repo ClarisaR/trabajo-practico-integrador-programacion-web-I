@@ -98,10 +98,10 @@
     grid-area: recomendados;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin: 10px;
 }
 
-.recomendados div {
+.recomendados .portada {
     position: relative;
     min-height: 200px;
     max-height: 400px;
@@ -127,7 +127,7 @@
     scrollbar-width: none;
     line-height: 20px;
     padding: 10px;
-    margin: 10px;
+
 }
 
 .recomendados .paragraph::-webkit-scrollbar {
