@@ -104,8 +104,73 @@ body {
   padding: 5px 5px;
 }
 
+
+
+
+
+
+
+.main .grid {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.main .grid h2{
+  padding: 10px 0;
+}
+
+.main .albums, .main .artistas, .main .canciones{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow-y: auto;
+  gap: 20px;
+}
+
 @media(max-width: 768px) {
-  .footer p {
-    font-size: 0.6em;
+  .main .albums, .main .artistas, .main .canciones  {
+      grid-template-columns: repeat(3, 1fr);
   }
+}
+
+@media(max-width: 375px) {
+  .main .albums, .main .artistas, .main .canciones {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.main .albums a, .main .artistas a, .main .canciones a{
+  padding: 15px 15px 30px 15px;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  color: var(--light-gray);
+  text-decoration: none;
+}
+
+.main .albums a img, .main .artistas a img, .main .canciones a img  {
+  width: 100%;
+  border-radius: 50%;
+}
+.main .albums .info, .main .artistas .info, .main .canciones .info{
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+@media(max-width: 768px){
+  .main .albums .info, .main .artistas .info, .main .canciones .info{
+      font-size: 0.9em;
+  }
+}
+
+
+.main .grid .albums a{
+  position: relative;
+
+}
+
+.main .grid .albums a .estrellita {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  top: 10px;
 }

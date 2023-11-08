@@ -1,4 +1,4 @@
-.favoritas_conteiner {
+.canciones_conteiner {
     display: grid;
     grid-template-columns: 5% 25% 25% 17% 28%;
     grid-template-rows: minmax(11%, auto);
@@ -8,21 +8,21 @@
     overflow-x: hidden;
 }
 @media(max-width: 768px) {
-    .favoritas_conteiner{
+    .canciones_conteiner {
         height: auto;
         grid-template-rows: repeat(9, auto)
     }
 }
-.favoritas_conteiner::-webkit-scrollbar {
+.canciones_conteiner ::-webkit-scrollbar {
     width: 8px;
 }
 
-.favoritas_conteiner::-webkit-scrollbar-thumb {
+.canciones_conteiner ::-webkit-scrollbar-thumb {
     background: var(--primary-color);
     border-radius: 4px;
 }
 
-.favoritas_conteiner .caja {
+.canciones_conteiner .caja {
     height: 40px;
     display: flex;
     align-items: center;
@@ -32,12 +32,12 @@
     padding: 5px;
 }
 @media(max-width: 768px) {
-    .favoritas_conteiner .caja{
+    .canciones_conteiner .caja{
         font-size: 0.9em;
     }
 }
 @media(max-width: 375px) {
-    .favoritas_conteiner .caja{
+    .canciones_conteiner .caja{
         font-size: 0.8em;
     }
 }
@@ -51,18 +51,19 @@
     border-radius: 5px;
 }
 
-/* Responsive */
+
 
 
 @media(max-width: 375px) {
-    .favoritas_conteiner {
+    .canciones_conteiner {
         font-size: 0.5em;
     }
 }
 
 @media(max-width: 768px) {
-    .favoritas_conteiner {
-        font-size: 0.7em;
+    .canciones_conteiner {
+        font-size: 0.5em;
     }
 }
+
 
