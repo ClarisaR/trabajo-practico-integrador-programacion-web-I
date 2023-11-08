@@ -32,10 +32,10 @@ function actualizar(palabraABuscar, array, callback){
 function cargarAlbumes(albumes) {
     albumesNodo.innerHTML ="";
     for (const album of albumes) {
-        const { nombre, portada, id_artista } = album;
+        const { nombre, portada, id_artista, id } = album;
 
         const nodoAlbum = document.createElement('a');
-        nodoAlbum.href = 'musica-sonando.html';
+        nodoAlbum.href = `musica-sonando.html?id_album=${id}`;
         const nodoPortada = document.createElement('img');
         nodoPortada.src = `img/${portada}.jpg`;
         nodoPortada.alt = portada;
@@ -56,10 +56,10 @@ cargarAlbumes(albumes);
 function cargarArtistas(artistas) {
     artistasNodo.innerHTML = "";
     for (const key in artistas) {
-        const { nombre, fotografia } = artistas[key];
+        const { nombre, fotografia, id} = artistas[key];
 
         const nodoArtista = document.createElement('a');
-        nodoArtista.href = 'musica-sonando.html';
+        nodoArtista.href = `musica-sonando.html?id_album=${id}`;
         const nodoFotografiaArtista = document.createElement('img');
         nodoFotografiaArtista.src = `img/${fotografia}.jpg`;
         nodoFotografiaArtista.alt = fotografia;
@@ -74,13 +74,13 @@ function cargarArtistas(artistas) {
 
 cargarArtistas(artistas);
 
-function cargarCanciones(canciones) {
+/*function cargarCanciones(canciones) {
     cancionesNodo.innerHTML = "";
     for (const cancion of canciones) {
-        const { nombre, portada, id_album } = cancion;
+        const { nombre, portada, id_album, id} = cancion;
 
         const nodoCancion = document.createElement('a');
-        nodoCancion.href = 'musica-sonando.html';
+        nodoCancion.href = `musica-sonando.html?id_album=${id_album}`;
 
         const nodoPortadaCancion = document.createElement('img');
         nodoPortadaCancion.src = `img/${portada}.jpg`;
@@ -98,6 +98,6 @@ function cargarCanciones(canciones) {
         cancionesNodo.appendChild(nodoCancion);
     }
 }
-cargarCanciones(canciones);
+cargarCanciones(canciones);*/
 
 

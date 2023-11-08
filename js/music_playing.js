@@ -151,7 +151,7 @@ function cargarCancionesAlbum(canciones) {
             const usuarios = JSON.parse(localStorage.getItem('usuarios'))
             const usuario = usuarios.find(usuario => usuario.id == idUsuarioLogueado)
             const { albumesFavoritos, cancionesFavoritas } = usuario
-            
+
             musica_sonando = cancion
             cancionAlbumSonandoNodo.innerText = ""
 
@@ -168,7 +168,7 @@ function cargarCancionesAlbum(canciones) {
             nodoEstrella.alt = estrella
             nodoEstrella.className = 'star'
             const cancionFavEncontrada = cancionesFavoritas.find(album => album.id == id_album)
-            
+
             if (cancionFavEncontrada) {
                 nodoEstrella.src = 'img/icon_favorite.png'
             } else {
@@ -196,15 +196,15 @@ function cargarCancionesAlbum(canciones) {
 
         //funcionalidad de evento click en un icono estrella de una cancion
         iconoEstrellaCancionNodo.addEventListener('click', function (evento) {
-            
+
             //obtengo canciones y albumes favoritos del usuario logueado
             const idUsuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado')).id
             const usuarios = JSON.parse(localStorage.getItem('usuarios'))
             const usuario = usuarios.find(usuario => usuario.id == idUsuarioLogueado)
             const { albumesFavoritos, cancionesFavoritas } = usuario
-
+            
             evento.stopPropagation()
-
+            
             const { id } = evento.target.dataset
 
             const cancionFavEncontrada = cancionesFavoritas.find(cancion => cancion.id == id)

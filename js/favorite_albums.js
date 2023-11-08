@@ -17,10 +17,10 @@ function cargarAlbumesFavoritos() {
 
     if (albumesFavoritos.length > 0) {
         for (const albumFavorito of albumesFavoritos) {
-            const { id, nombre, portada, id_artista, estrella } = albumFavorito
+            const { id, nombre, portada, id_artista, estrella} = albumFavorito
 
             const nodoAlbum = document.createElement('a')
-            nodoAlbum.href = 'musica-sonando.html';
+            nodoAlbum.href = `musica-sonando.html?id_album=${id}`;
             nodoAlbum.id = 'enlace'
             const nodoPortada = document.createElement('img')
             nodoPortada.src = `img/${portada}.jpg`;
