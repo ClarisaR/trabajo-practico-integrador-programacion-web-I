@@ -3,10 +3,11 @@ cargarNombreDeUsuarioLogueado();
 
 const nodoCerrarSesion = document.getElementById('cerrar_sesion')
 const cancionAlbumSonandoNodo = document.getElementById('cancion_album_sonando')
+const favoritasNodo = document.getElementById('favoritas_conteiner')
 
 nodoCerrarSesion.addEventListener('click', cerrarSesion)
 
-const favoritasNodo = document.getElementById('favoritas_conteiner')
+
 
 function agregarTitulosTabla() {
     const playNodo = document.createElement('p')
@@ -36,6 +37,7 @@ agregarTitulosTabla()
 
 function cargarCancionesFavoritas() {
     favoritasNodo.innerHTML = ""
+    agregarTitulosTabla()
     //obtengo canciones favoritos del usuario logueado
     const idUsuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado')).id
     const usuarios = JSON.parse(localStorage.getItem('usuarios'))
