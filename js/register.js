@@ -52,7 +52,6 @@ function registrarUsuario(evento) {
         id: crypto.randomUUID(),
         usuario: nombre,
         contrasenia: contraseniaAlmacenada,
-        repetirContrasenia: repetirContrasenia,
         email: email,
         fechaNacimiento: fechaNacimiento,
         albumesFavoritos: [],

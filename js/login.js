@@ -13,12 +13,12 @@ function iniciar_sesion(evento) {
         return;
     }
 
-    let contraseniaAlmacenada = invertirContrasenia(contrasenia);
+    let contraseniaInvertida= invertirContrasenia(contrasenia);
 
     const usuarioEncontrado = usuarios.find(usuarioActual => usuarioActual.usuario == usuario)
 
 
-    if (usuarioEncontrado && usuarioEncontrado.contrasenia == contrasenia) {
+    if (usuarioEncontrado && usuarioEncontrado.contrasenia == contraseniaInvertida) {
         localStorage.setItem('usuarioLogueado', JSON.stringify(usuarioEncontrado));
         window.location.href = 'pantalla-principal.html';
     } else {
