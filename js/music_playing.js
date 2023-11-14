@@ -107,6 +107,8 @@ cargarAlbum(albumes, artistas)
 
 function cargarCancionesAlbum(canciones) {
 
+    cancionesNodo.innerText = ""
+
     const cancionesDelAlbum = canciones.filter(cancion => cancion.id_album == id_album)
 
     //obtengo canciones y albumes favoritos del usuario logueado
@@ -167,7 +169,7 @@ function cargarCancionesAlbum(canciones) {
             const nodoEstrella = document.createElement('img')
             nodoEstrella.alt = estrella
             nodoEstrella.className = 'star'
-            const cancionFavEncontrada = cancionesFavoritas.find(album => album.id == id_album)
+            const cancionFavEncontrada = cancionesFavoritas.find(cancion => cancion.id == id)
 
             if (cancionFavEncontrada) {
                 nodoEstrella.src = 'img/icon_favorite.png'
@@ -201,7 +203,7 @@ function cargarCancionesAlbum(canciones) {
             const idUsuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado')).id
             const usuarios = JSON.parse(localStorage.getItem('usuarios'))
             const usuario = usuarios.find(usuario => usuario.id == idUsuarioLogueado)
-            const { albumesFavoritos, cancionesFavoritas } = usuario
+            const {cancionesFavoritas } = usuario
             
             evento.stopPropagation()
             
@@ -212,7 +214,6 @@ function cargarCancionesAlbum(canciones) {
                 iconoEstrellaCancionNodo.style = 'color: #808080;'
                 usuario.cancionesFavoritas = cancionesFavoritas.filter(cancionFav => cancionFav.id != id)
                 localStorage.setItem('usuarios', JSON.stringify(usuarios))
-
             } else {
                 iconoEstrellaCancionNodo.style = 'color: 	#1DB954;'
                 usuario.cancionesFavoritas.push(cancion)
@@ -237,6 +238,9 @@ function cargarCancionesAlbum(canciones) {
 
         albumNodo.appendChild(iconoEstrellaAlbumNodo)
 
+        //funcionalidad click en una estrella del album sonando
+        iconoEstrellaAlbumNodo.addEventListener('click', marcarOQuitarDeAlbumesFavoritos)
+
         //duracion
         const duracionNodo = document.createElement('div')
         duracionNodo.innerText = duracion
@@ -257,3 +261,26 @@ function cargarCancionesAlbum(canciones) {
 }
 
 cargarCancionesAlbum(canciones)
+
+function marcarOQuitarDeAlbumesFavoritos(){
+    //obtengo canciones y albumes favoritos del usuario logueado
+    const idUsuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado')).id
+    const usuarios = JSON.parse(localStorage.getItem('usuarios'))
+    const usuario = usuarios.find(usuario => usuario.id == idUsuarioLogueado)
+    const { albumesFavoritos} = usuario
+
+    const albumFavEncontrado = albumesFavoritos.find(album => album.id == id_album)
+    if(albumFavEncontrado){
+        this.style = 'color: #808080;'
+        usuario.albumesFavoritos = albumesFavoritos.filter(album => album.id != id_album)
+        localStorage.setItem('usuarios', JSON.stringify(usuarios))
+        window.location.reload()
+    }else{
+        this.style = 'color: 	#1DB954;'
+        const albumEncontrado = albumes.find(album => album.id == id_album)
+        usuario.albumesFavoritos.push(albumEncontrado)
+        localStorage.setItem('usuarios', JSON.stringify(usuarios))
+        window.location.reload()
+    }
+
+}

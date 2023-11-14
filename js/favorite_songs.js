@@ -116,57 +116,114 @@ function cargarCancionesFavoritas() {
 
 
         //funcionalidad de evento click en un icono estrella de una cancion
-        iconoEstrellaCancionNodo.addEventListener('click', function (evento) {
+        iconoEstrellaCancionNodo.addEventListener('click', quitarDeFavoritas)
 
+        //album de la cancion
+        const albumNodo = document.createElement('div')
+        albumNodo.innerText = albumes[id_album - 1].nombre
+        albumNodo.className = 'caja'
+        const iconoEstrellaAlbumNodo = document.createElement('i')
+        iconoEstrellaAlbumNodo.className = 'fa-solid fa-star'
+
+        const albumEncontrado = albumesFavoritos.find(album => album.id == id_album)
+        if (albumEncontrado) {
+            iconoEstrellaAlbumNodo.style = 'color: 	#1DB954;'
+        } else {
+            iconoEstrellaAlbumNodo.style = 'color: #808080;'
+        }
+
+        albumNodo.appendChild(iconoEstrellaAlbumNodo)
+
+        //funcionalidad click en una estrella del album
+        iconoEstrellaAlbumNodo.addEventListener('click', function () {
             //obtengo canciones y albumes favoritos del usuario logueado
             const idUsuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado')).id
             const usuarios = JSON.parse(localStorage.getItem('usuarios'))
             const usuario = usuarios.find(usuario => usuario.id == idUsuarioLogueado)
-            const { albumesFavoritos, cancionesFavoritas } = usuario
-            evento.stopPropagation()
+            const { albumesFavoritos } = usuario
 
-            const { id } = evento.target.dataset
+            const albumFavEncontrado = albumesFavoritos.find(album => album.id == id_album)
+            if (albumFavEncontrado) {
+                this.style = 'color: #808080;'
+                usuario.albumesFavoritos = albumesFavoritos.filter(album => album.id != id_album)
+                localStorage.setItem('usuarios', JSON.stringify(usuarios))
+                window.location.reload()
+            } else {
+                this.style = 'color: 	#1DB954;'
+                const albumEncontrado = albumes.find(album => album.id == id_album)
+                usuario.albumesFavoritos.push(albumEncontrado)
+                localStorage.setItem('usuarios', JSON.stringify(usuarios))
+                window.location.reload()
+            }
 
-            iconoEstrellaCancionNodo.style = 'color: #808080;'
-            usuario.cancionesFavoritas = cancionesFavoritas.filter(cancionFav => cancionFav.id != id)
-            localStorage.setItem('usuarios', JSON.stringify(usuarios))
-
-            cargarCancionesFavoritas()
         })
 
-         //album de la cancion
-         const albumNodo = document.createElement('div')
-         albumNodo.innerText = albumes[id_album - 1].nombre
-         albumNodo.className = 'caja'
-         const iconoEstrellaAlbumNodo = document.createElement('i')
-         iconoEstrellaAlbumNodo.className = 'fa-solid fa-star'
- 
-         const albumEncontrado = albumesFavoritos.find(album => album.id == id_album)
-         if (albumEncontrado) {
-             iconoEstrellaAlbumNodo.style = 'color: 	#1DB954;'
-         } else {
-             iconoEstrellaAlbumNodo.style = 'color: #808080;'
-         }
- 
-         albumNodo.appendChild(iconoEstrellaAlbumNodo)
- 
-         //duracion
-         const duracionNodo = document.createElement('div')
-         duracionNodo.innerText = duracion
-         duracionNodo.className = 'caja'
- 
-         //reproducciones
-         const reproduccionesNodo = document.createElement('div')
-         reproduccionesNodo.innerText = reproducciones
-         reproduccionesNodo.className = 'caja'
- 
-         favoritasNodo.appendChild(playNodo)
-         favoritasNodo.appendChild(nombreCancionNodo)
-         favoritasNodo.appendChild(albumNodo)
-         favoritasNodo.appendChild(duracionNodo)
-         favoritasNodo.appendChild(reproduccionesNodo)
+        //duracion
+        const duracionNodo = document.createElement('div')
+        duracionNodo.innerText = duracion
+        duracionNodo.className = 'caja'
+
+        //reproducciones
+        const reproduccionesNodo = document.createElement('div')
+        reproduccionesNodo.innerText = reproducciones
+        reproduccionesNodo.className = 'caja'
+
+        favoritasNodo.appendChild(playNodo)
+        favoritasNodo.appendChild(nombreCancionNodo)
+        favoritasNodo.appendChild(albumNodo)
+        favoritasNodo.appendChild(duracionNodo)
+        favoritasNodo.appendChild(reproduccionesNodo)
     }
 }
 
 cargarCancionesFavoritas()
+
+function quitarDeFavoritas(evento) {
+
+    //obtengo canciones y albumes favoritos del usuario logueado
+    const idUsuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado')).id
+    const usuarios = JSON.parse(localStorage.getItem('usuarios'))
+    const usuario = usuarios.find(usuario => usuario.id == idUsuarioLogueado)
+    const { albumesFavoritos, cancionesFavoritas } = usuario
+    evento.stopPropagation()
+
+    const { id } = evento.target.dataset
+
+    this.style = 'color: #808080;'
+    usuario.cancionesFavoritas = cancionesFavoritas.filter(cancionFav => cancionFav.id != id)
+    localStorage.setItem('usuarios', JSON.stringify(usuarios))
+
+    cargarCancionesFavoritas()
+}
+
+function mostrarCancionAlbumSonando() {
+    const musicaSonando = JSON.parse(localStorage.getItem('musica_sonando'))
+    if (musicaSonando) {
+        const { nombre, portada } = musicaSonando
+
+        const nodoPortada = document.createElement('div')
+        nodoPortada.className = 'portada'
+        const nodoImagenPortada = document.createElement('img')
+        nodoImagenPortada.src = `img/${portada}.jpg`
+        nodoImagenPortada.alt = portada
+        nodoImagenPortada.className = 'cover'
+
+        nodoPortada.appendChild(nodoImagenPortada)
+
+        const nodoInfo = document.createElement('div')
+        nodoInfo.className = 'paragraph'
+        const nodoNombreCancionAlbum = document.createElement('p')
+        nodoNombreCancionAlbum.innerText = nombre
+
+        nodoInfo.appendChild(nodoNombreCancionAlbum)
+
+        cancionAlbumSonandoNodo.appendChild(nodoPortada)
+        cancionAlbumSonandoNodo.appendChild(nodoInfo)
+    }
+}
+
+mostrarCancionAlbumSonando()
+
+
+
 
