@@ -16,9 +16,8 @@ function cargarDatosDeUsuario() {
     const usuarioLogueadoString = localStorage.getItem('usuarioLogueado')
     const usuarioLogueadoOBJ = JSON.parse(usuarioLogueadoString)
     nodoNombreUsuario.value = usuarioLogueadoOBJ.usuario
-    nodoNombreUsuario.disabled = true;
     nodoContrasenia.value = usuarioLogueadoOBJ.contrasenia
-    nodoRepetirContrasenia.value = usuarioLogueadoOBJ.repetirContrasenia
+    nodoRepetirContrasenia.value = usuarioLogueadoOBJ.contrasenia
     nodoEmail.value = usuarioLogueadoOBJ.email
     nodoFechaNacimiento.value = usuarioLogueadoOBJ.fechaNacimiento
 }
@@ -28,14 +27,23 @@ cargarDatosDeUsuario()
 
 
 function actualizarUsuario(evento) {
+
+    ocultarMensajesDeError()
     evento.preventDefault()
+
     const usuario = nodoNombreUsuario.value
     const contrasenia = nodoContrasenia.value
     const repetirContrasenia = nodoRepetirContrasenia.value
     const fechaNacimiento = nodoFechaNacimiento.value
     const email = nodoEmail.value
+    const id = JSON.parse(localStorage.getItem('usuarioLogueado')).id
 
     let hayError = false;
+
+    if (usuario.length < 5) {
+        mostrarMensajeDeError('mensaje_error_nombre', 'El nombre debe contener al menos 5 caracteres');
+        hayError = true;
+    }
 
     if (contrasenia.length < 8) {
         mostrarMensajeDeError('mensaje_error_contrasenia', 'La contraseña debe contener al menos 8 caracteres');
@@ -57,19 +65,37 @@ function actualizarUsuario(evento) {
         mostrarMensajeDeError('campo_requerido_fecha', 'Campo requerido');
         hayError = true;
     }
+
+    for (const usuarioActual of usuariosGuardados) {
+        if (usuarioActual.id != id && usuarioActual.usuario == usuario) {
+            mostrarMensajeDeError('mensaje_error_nombre', 'Este nombre de usuario no esta disponible')
+            hayError = true;
+        }
+    }
+
     if (hayError) {
         return;
     }
 
-    const contraseniaAlmacenada = invertirContrasenia(contrasenia);
-
-    const usuarioEncontrado = usuariosGuardados.find(usuarioActual => usuarioActual.usuario == usuario)
+    const usuarioEncontrado = usuariosGuardados.find(usuarioActual => usuarioActual.id == id)
 
 
-    usuarioEncontrado.contrasenia = contraseniaAlmacenada
-    usuarioEncontrado.repetirContrasenia = contraseniaAlmacenada
-    usuarioEncontrado.email = email
-    usuarioEncontrado.fechaNacimiento = fechaNacimiento
+    if (usuarioEncontrado.contrasenia == contrasenia) {
+        usuarioEncontrado.usuario = usuario
+        usuarioEncontrado.contrasenia = contrasenia
+        usuarioEncontrado.repetirContrasenia = contrasenia
+        usuarioEncontrado.email = email
+        usuarioEncontrado.fechaNacimiento = fechaNacimiento
+    }else{
+        const contraseniaInvertida = invertirContrasenia(contrasenia);
+
+        usuarioEncontrado.usuario = usuario
+        usuarioEncontrado.contrasenia = contraseniaInvertida
+        usuarioEncontrado.repetirContrasenia = contraseniaInvertida
+        usuarioEncontrado.email = email
+        usuarioEncontrado.fechaNacimiento = fechaNacimiento
+    }
+
 
     localStorage.setItem('usuarios', JSON.stringify(usuariosGuardados))
 
@@ -91,13 +117,6 @@ function invertirContrasenia(contrasenia) {
     return segundaMitad + primeraMitad;
 }
 
-function ocultarMensajesDeError() {
-    document.getElementById('mensaje_error_contrasenia').style.display = 'none';
-    document.getElementById('mensaje_error_contrasenias_distintas').style.display = 'none';
-    document.getElementById('mensaje_error_email').style.display = 'none';
-    document.getElementById('campo_requerido_fecha').style.display = 'none';
-}
-
 function mostrarModal() {
     const respuesta = confirm('Datos guardados correctamente. Quieres ir al home?')
     if (respuesta) {
@@ -116,4 +135,12 @@ function eliminarUsuario() {
 
     //Elimino el usuario logueado del localStorage
     localStorage.removeItem('usuarioLogueado')
+}
+
+function ocultarMensajesDeError() {
+    document.getElementById('mensaje_error_nombre').style.display = 'none';
+    document.getElementById('mensaje_error_contrasenia').style.display = 'none';
+    document.getElementById('mensaje_error_contrasenias_distintas').style.display = 'none';
+    document.getElementById('mensaje_error_email').style.display = 'none';
+    document.getElementById('campo_requerido_fecha').style.display = 'none';
 }

@@ -109,7 +109,6 @@ body {
 
 
 
-
 .main .grid {
   overflow-y: auto;
   height: 100%;
@@ -173,4 +172,21 @@ body {
   height: 40px;
   right: 10px;
   top: 10px;
+}
+
+
+.contenedor_msj_error{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.mensaje_error{
+  display: none;
+  color: red;
+  margin-top: 5px;
+}
+@media (max-width: 768px) {
+  .mensaje_error{
+      width: 50%;
+  }
 }
