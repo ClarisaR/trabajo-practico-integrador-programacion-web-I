@@ -13,4 +13,6 @@ function cargarNombreDeUsuarioLogueado() {
 
 function cerrarSesion() {
     localStorage.removeItem('usuarioLogueado')
+
+    localStorage.removeItem('musica_sonando')
 }

@@ -4,7 +4,7 @@ cargarNombreDeUsuarioLogueado();
 //todos los nodos que utilizaré
 const albumesNodo = document.getElementById('albumes')
 const nodoCerrarSesion = document.getElementById('cerrar_sesion')
-
+const nodoCancionOAlbumSonando = document.getElementById('cancion_album_sonando')
 
 nodoCerrarSesion.addEventListener('click', cerrarSesion)
 
@@ -83,5 +83,33 @@ function cargarAlbumes(albumes) {
 }
 
 cargarAlbumes(albumes);
+
+function mostrarCancionAlbumSonando() {
+    const musicaSonando = JSON.parse(localStorage.getItem('musica_sonando'))
+    if (musicaSonando) {
+        const { nombre, portada } = musicaSonando
+
+        const nodoPortada = document.createElement('div')
+        nodoPortada.className = 'portada'
+        const nodoImagenPortada = document.createElement('img')
+        nodoImagenPortada.src = `img/${portada}.jpg`
+        nodoImagenPortada.alt = portada
+        nodoImagenPortada.className = 'cover'
+
+        nodoPortada.appendChild(nodoImagenPortada)
+
+        const nodoInfo = document.createElement('div')
+        nodoInfo.className = 'paragraph'
+        const nodoNombreCancionAlbum = document.createElement('p')
+        nodoNombreCancionAlbum.innerText = nombre
+
+        nodoInfo.appendChild(nodoNombreCancionAlbum)
+
+        nodoCancionOAlbumSonando.appendChild(nodoPortada)
+        nodoCancionOAlbumSonando.appendChild(nodoInfo)
+    }
+}
+
+mostrarCancionAlbumSonando()
 
 
