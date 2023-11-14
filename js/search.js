@@ -5,6 +5,7 @@ const artistasNodo = document.getElementById('artistas');
 const cancionesNodo = document.getElementById('canciones');
 const nodoInput = document.getElementById('buscar');
 const nodoCerrarSesion = document.getElementById('cerrar_sesion')
+const nodoCancionOAlbumSonando = document.getElementById('cancion_album_sonando')
 
 //todos los listener
 nodoInput.addEventListener('keyup', actualizarResultados);
@@ -99,5 +100,33 @@ cargarArtistas(artistas);
     }
 }
 cargarCanciones(canciones);*/
+
+function mostrarCancionAlbumSonando() {
+    const musicaSonando = JSON.parse(localStorage.getItem('musica_sonando'))
+    if (musicaSonando) {
+        const { nombre, portada } = musicaSonando
+
+        const nodoPortada = document.createElement('div')
+        nodoPortada.className = 'portada'
+        const nodoImagenPortada = document.createElement('img')
+        nodoImagenPortada.src = `img/${portada}.jpg`
+        nodoImagenPortada.alt = portada
+        nodoImagenPortada.className = 'cover'
+
+        nodoPortada.appendChild(nodoImagenPortada)
+
+        const nodoInfo = document.createElement('div')
+        nodoInfo.className = 'paragraph'
+        const nodoNombreCancionAlbum = document.createElement('p')
+        nodoNombreCancionAlbum.innerText = nombre
+
+        nodoInfo.appendChild(nodoNombreCancionAlbum)
+
+        nodoCancionOAlbumSonando.appendChild(nodoPortada)
+        nodoCancionOAlbumSonando.appendChild(nodoInfo)
+    }
+}
+
+mostrarCancionAlbumSonando()
 
 
