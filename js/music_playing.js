@@ -109,6 +109,8 @@ function cargarCancionesAlbum(canciones) {
 
     cancionesNodo.innerText = ""
 
+    agregarTitulosTabla()
+
     const cancionesDelAlbum = canciones.filter(cancion => cancion.id_album == id_album)
 
     //obtengo canciones y albumes favoritos del usuario logueado
