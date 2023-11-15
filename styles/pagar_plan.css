@@ -49,7 +49,7 @@
 
 .plan_elegido .plan_description {
     display: flex;
-    padding: 30px 0;
+    padding: 20px 0;
     align-items: center;
 }
 
@@ -120,8 +120,25 @@
 
 .field input {
     flex: 2;
+    height: 10px;
 }
 
 .button_container {
     margin-bottom: 20px;
 }
+
+.contenedor_msj_error_usuario{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .mensaje_error{
+    display: none;
+    color: red;
+    margin-top: 5px;
+  }
+  @media (max-width: 768px) {
+    .mensaje_error{
+        width: 60%;
+    }
+  }
