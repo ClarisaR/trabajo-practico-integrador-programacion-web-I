@@ -55,7 +55,8 @@ function registrarUsuario(evento) {
         email: email,
         fechaNacimiento: fechaNacimiento,
         albumesFavoritos: [],
-        cancionesFavoritas: []
+        cancionesFavoritas: [],
+        planPremium: ""
     };
 
     usuariosGuardados.push(nuevoUsuario);

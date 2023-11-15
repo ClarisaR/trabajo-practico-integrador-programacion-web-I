@@ -13,67 +13,64 @@
 <body>
     <div class="grid_container">
         <header class="header">
-            <div class="user_info"> <!---->
-                <div>
-                    <p>Nombre usuario</p>
-                    <a href="index.html" class="cerrar_sesion">Cerrar sesión</a>
-                </div>
-
-                <a href="perfil.html">
-                    <img src="img/avatar.png" class="avatar" alt="avatar"> <!---->
-                </a>
+            <div class="user_info" id="user_info"> <!---->
+                
             </div>
         </header>
         <main class="main">
             <div class="card">
-                <section class="plan_elegido" id="vistaActual">
-                    <h3>Elegiste el Plan Infinito</h3> 
-                    <div class="plan_description">
-                        <img src="img/plan_infinito.png"> 
-                        <ul> 
-                            <li> ✔ $29.999 por única vez</li>
-                            <li> ✔ Escucha música sin anuncios</li>
-                            <li> ✔ Reproduce tus canciones en cualquier lugar, hasta sin conexión</li>
-                            <li> ✔ Arma tus propios playlist</li>
-                            <li> ✔ Música de por vida</li>
-                        </ul>
-                    </div>    
+                <section class="plan_elegido" id="plan_elegido">
+                   
                 </section>
 
-                <form action="pantalla-principal.html" id="form_pagar" method="get" onsubmit="return validar()"> 
+                <form id="form_pagar" method="post"> 
                     <section class="user_data"> <!--class="card"-->
                         <div class="fields">
                             <div class="field"> <!--class="field"-->
                                 <label for="Tarjeta">Tarjeta</label>
-                                <input id="Tarjeta" type="text" name="Tarjeta" placeholder="Ingrese su tarjeta"
-                                    pattern="[0-9]{16}">
+                                <input id="tarjeta" type="text" name="Tarjeta" placeholder="Ingrese su tarjeta">
+                            </div>
+                            <div class="contenedor_msj_error">
+                                <small class="mensaje_error" id="mensaje_error_tarjeta"> </small>
                             </div>
                             <div class="field"> <!--class="field"-->
                                 <label for="CVC">CVC</label>
-                                <input id="CVC" type="text" name="CVC" placeholder="000">
+                                <input id="CVC" type="text" name="CVC" placeholder="111">
+                            </div>
+                            <div class="contenedor_msj_error">
+                                <small class="mensaje_error" id="mensaje_error_CVC"> </small>
                             </div>
                         </div>
 
                         <div class="fields">
                             <div class="field"> <!--class="field"-->
                                 <label for="VTO">VTO</label>
-                                <input id="VTO" type="month" name="VTO"> 
+                                <input id="VTO" type="date" name="VTO"> 
+                            </div>
+                            <div class="contenedor_msj_error">
+                                <small class="mensaje_error" id="mensaje_error_VTO"> </small>
                             </div>
                             <div class="field"> <!--class="field"-->
-                                <label for="Nombre_Apellido">Nombre y Apellido</label>
-                                <input id="Nombre_Apellido" type="text" name="Nombre_Apellido" placeholder="Ingrese su nombre y apellido"> 
+                                <label for="nombre_apellido">Nombre y Apellido</label>
+                                <input id="nombre_apellido" type="text" name="nombre_apellido" placeholder="Ingrese su nombre y apellido"> 
+                            </div>
+                            <div class="contenedor_msj_error">
+                                <small class="mensaje_error" id="mensaje_error_nombre_apellido"> </small>
                             </div>
                         </div>
                     </section>
 
-                    <div id="mensaje" class="error"></div> 
+                    <div class="contenedor_msj_error">
+                        <small class="mensaje_error" id="mensaje_error_usuario"> </small>
+                    </div>
+
 
                     <div class="button_container"> <!--class="card"-->
                         <button type="submit" class="button" id="buttonPagar">Pagar</button>
-                        <a href="pantalla-principal.html"> <input type="submit" value="Cancelar" class="button"> </a>
+                        <a class="button" id="cancelar"> Cancelar</a>
                     </div>
-                    <div id="mostrar"></div>   
-                        <div class="popup">
+                    <!--<div id="mostrar"></div>-->
+                        <div class="popup" style="display: none;">
                             <p class="pagoExitoso">Pago exitoso</p>
                             <button id="btnAceptar">Aceptar</button>
                         </div>
@@ -86,9 +83,9 @@
         </footer>
     </div>
     </div>
-    <script src="js/login.js"></script>
-    <script src="js/pagar_plan.js"></script>
-    <script src="js/premium.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/session_management.js"></script>
+    <script src="js/pay_plan.js"></script>
 </body>
 
 </html>

@@ -776,3 +776,33 @@ const canciones = [
         estrella: 'estrella'
     }
 ]
+
+const planes = [
+    {
+        value: 'plan_mensual',
+        nombre: 'Plan Mensual',
+        precio: ' A $1499 por mes.',
+        portada: 'plan_mensual',
+        beneficioUno: 'Escucha música sin anuncios.',
+        beneficioDos: 'Reproduce tus cancnones en cualquier lugar, hasta sin conexión.',
+        beneficioTres: 'Armá tus propios playlist.'
+    },
+    {
+        value: 'plan_anual',
+        nombre: 'Plan Anual',
+        precio: ' A $9999 por año.',
+        portada: 'plan_anual',
+        beneficioUno: 'Escucha música sin anuncios.',
+        beneficioDos: 'Reproduce tus cancnones en cualquier lugar, hasta sin conexión.',
+        beneficioTres: 'Armá tus propios playlist.'
+    },
+    {
+        value: 'plan_infinito',
+        nombre: 'Plan Infinito',
+        precio: 'Un único pago de $29.999.',
+        portada: 'plan_infinito',
+        beneficioUno: 'Escucha música sin anuncios.',
+        beneficioDos: 'Reproduce tus cancnones en cualquier lugar, hasta sin conexión.',
+        beneficioTres: 'Música de por vida.'
+    }
+]

@@ -14,21 +14,14 @@
     <div class="grid_container">
         <header class="header">
             <h2>PLANES PREMIUM</h2>
-            <div class="user_info"> <!---->
-                <div>
-                    <p>Nombre usuario</p>
-                    <a href="index.html" class="cerrar_sesion">Cerrar sesión</a>
-                </div>
-
-                <a href="perfil.html">
-                    <img src="img/avatar.png" class="avatar" alt="avatar"> <!---->
-                </a>
+            <div class="user_info" id="user_info"> 
+                
             </div>
         </header>
 
         <main>
             <section class="plan_premium">
-                <form class="form_plan" action="#" method="get">
+                <form class="form_plan" action="pagar-plan.html" method="get">
                     <div class="grid_container_plans">
                         <article class="tipoDePlan">
                             <div class="plan_info">
@@ -44,7 +37,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <label for="plan"></label>
+                            <label for="plan_mensual"></label>
                             <input id="plan_mensual" type="radio" name="plan" value="plan_mensual"
                                 class="planRadioButton">
                         </article>
@@ -63,8 +56,8 @@
                                     </ul>
                                 </div>
                             </div>
-                            <label for="plan"></label>
-                            <input id="plan" type="radio" name="plan" value="plan_anual" class="planRadioButton">
+                            <label for="plan_anual"></label>
+                            <input id="plan_anual" type="radio" name="plan" value="plan_anual" class="planRadioButton">
                         </article>
 
                         <article class="tipoDePlan">
@@ -81,14 +74,14 @@
                                     </ul>
                                 </div>
                             </div>
-                            <label for="plan"></label>
-                            <input id="plan" type="radio" name="plan" value="plan_infinito" class="planRadioButton">
+                            <label for="plan_infinito"></label>
+                            <input id="plan_infinito" type="radio" name="plan" value="plan_infinito" class="planRadioButton">
                         </article>
                     </div>
                     <section class="button_container"> <!--class="card"-->
                         <a href="pantalla-principal.html" class="button a_button">Cancelar</a>
                         <!--class="buttonPagar"-->
-                        <button type="submit" id="buttonAvanzar" class="button a_button">Avanzar</button>
+                        <button type="submit" id="button_avanzar" class="button a_button">Avanzar</button>
                         <!-- <a href="pagar-plan.html" class="button a_button">Avanzar</a> -->
                         
                     </section>
@@ -101,7 +94,7 @@
             <p>Integrante 2: Pablo Barcena</p>
         </footer>
     </div>
-
+    <script src="js/session_management.js"></script>
     <script src="js/premium.js"></script>
 </body>
 
