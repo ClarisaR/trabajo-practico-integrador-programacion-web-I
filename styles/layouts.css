@@ -160,12 +160,6 @@ audio::-webkit-media-controls-panel {
 .footer {
     grid-area: footer;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     border: 1px solid var(--dark-gray);
-}
-
-@media (max-width: 768px) {
-    .footer {
-        grid-template-columns: 1fr;
-    }
 }
